@@ -11,7 +11,7 @@ Before we start, ensure you have the following:
    - Sufficient storage space (at least 50 GB free for the virtual machine).
 
 2. **Software Requirements**:
-   - **Virtualization Software**: Microsoft Hyper-V, VMware Workstation or Oracle VirtualBox.
+   - **Virtualization Software**: Microsoft Hyper-V, VMware Workstation, or Oracle VirtualBox.
    - **Windows Server 2019 ISO**: Download from the Microsoft website.
    - **Windows 10 ISO**: Download from the Microsoft website.
 
@@ -22,3 +22,44 @@ Before we start, ensure you have the following:
 
 Next, we'll start with the installation of the virtualization software and setting up the virtual machine.
 
+### Installing Windows Server 2019
+
+1. **Create a New Virtual Machine**:
+   - Open your virtualization software (e.g., VMware Workstation or VirtualBox).
+   - Click on "Create a New Virtual Machine" or a similar option.
+   - Choose the option to install the operating system later if prompted.
+
+2. **Configure the Virtual Machine**:
+   - **Name**: Give your virtual machine a name (e.g., "Windows Server 2019").
+   - **Location**: Choose a location to store the virtual machine files.
+   - **Type**: Select "Microsoft Windows".
+   - **Version**: Choose "Windows Server 2019".
+
+3. **Allocate Resources**:
+   - **Memory (RAM)**: Allocate at least 2 GB of RAM.
+   - **Processor**: Assign at least 2 virtual processors.
+   - **Hard Disk**: Create a new virtual hard disk with at least 32 GB of storage.
+
+4. **Attach the Windows Server 2019 ISO**:
+   - In the virtual machine settings, find the "CD/DVD" drive option.
+   - Attach the Windows Server 2019 ISO file you downloaded earlier.
+
+5. **Start the Virtual Machine**:
+   - Power on the virtual machine.
+   - The virtual machine will boot from the attached ISO file.
+
+6. **Windows Server 2019 Installation**:
+   - **Language, Time, and Keyboard**: Choose your preferences and click "Next".
+   - **Install Now**: Click the "Install Now" button.
+   - **Edition**: Select the Windows Server 2019 Standard Datacenter.
+   - **License Agreement**: Accept the license terms and click "Next".
+   - **Installation Type**: Choose "Custom: Install Windows only (advanced)".
+   - **Partition**: Select the unallocated space and click "Next". The installer will create the necessary partitions and start the installation.
+
+7. **Complete Installation**:
+   - The installation process will take several minutes. Once complete, the system will restart.
+   - **Initial Configuration**: After the restart, set a strong password for the Administrator account.
+
+8. Login with the Administrator account using the password you set.
+
+Once you're logged in, the basic installation of Windows Server 2019 is complete.
