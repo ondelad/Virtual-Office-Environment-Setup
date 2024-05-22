@@ -22,7 +22,7 @@ Before we start, ensure you have the following:
 
 Next, we'll start with the installation of the virtualization software and setting up the virtual machine.
 
-### Installing Windows Server 2019
+## Installing Windows Server 2019
 
 1. **Create a New Virtual Machine**:
    - Open your virtualization software (e.g., VMware Workstation or VirtualBox).
