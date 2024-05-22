@@ -19,7 +19,6 @@ Before we start, ensure you have the following:
    - A stable internet connection for downloading necessary software and updates.
    - Basic understanding of network concepts and IP addressing.
 
-
 Next, we'll start with the installation of the virtualization software and setting up the virtual machine.
 
 ## Step 1: Installing Windows Server 2019
@@ -90,6 +89,27 @@ Once you're logged in, the basic installation of Windows Server 2019 is complete
 
 Now that the NICs are configured, the server is set up to connect to the internet and to serve client machines on a private network.
 
+## Step 3: Rename the Windows Server 2019 Machine
+Renaming your server will help in identifying it easily on the network.
 
+1. **Open Server Manager**:
+   - Click on the **Start** menu.
+   - Select **Server Manager**.
+
+2. **Navigate to the System Properties**:
+   - In Server Manager, click on **Local Server** on the left panel.
+   - In the **Properties** section, click on the current **Computer Name**.
+
+3. **Change Computer Name**:
+   - In the **System Properties** window, click the **Change** button.
+   - In the **Computer Name/Domain Changes** window, enter a new name for your server in the **Computer name** field (e.g., "DC").
+   - Click **OK**.
+
+4. **Restart the Server**:
+   - You will be prompted to restart your server to apply the changes.
+   - Click **OK** on the prompt and then click **Close** on the System Properties window.
+   - Click **Restart Now** to reboot the server.
+
+After the server restarts, it will have the new name you assigned. This will make it easier to manage and identify on your network.
 
 
