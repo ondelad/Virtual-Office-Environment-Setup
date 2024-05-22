@@ -81,12 +81,15 @@ Once you're logged in, the basic installation of Windows Server 2019 is complete
    - Assign a static IP address. For example:
      - IP address: 192.168.0.1
      - Subnet mask: 255.255.255.0
-     - Leave the default gateway and DNS server fields empty.
+     - DNS server: 127.0.0.1
+     - Leave the default gateway field empty.
 
 4. **Verify Connectivity**:
    - Ensure that the "INTERNET" NIC has internet access.
    - The "INTENAL" NIC should be isolated from the internet but able to communicate with internal clients.
 
 Now that the NICs are configured, the server is set up to connect to the internet and to serve client machines on a private network.
+
+
 
 
