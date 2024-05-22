@@ -102,7 +102,7 @@ Renaming your server will help in identifying it easily on the network.
 
 3. **Change Computer Name**:
    - In the **System Properties** window, click the **Change** button.
-   - In the **Computer Name/Domain Changes** window, enter a new name for your server in the **Computer name** field (e.g., "DC").
+   - In the **Computer Name/Domain Changes** window, enter a new name for your server in the **Computer name** field (e.g. "DC").
    - Click **OK**.
 
 4. **Restart the Server**:
