@@ -89,7 +89,7 @@ Once you're logged in, the basic installation of Windows Server 2019 is complete
 
 Now that the NICs are configured, the server is set up to connect to the internet and to serve client machines on a private network.
 
-## Step 3: Rename the Windows Server 2019 Machine
+## Step 3: Rename the Windows Server Machine
 Renaming your server will help in identifying it easily on the network.
 
 1. **Open Server Manager**:
