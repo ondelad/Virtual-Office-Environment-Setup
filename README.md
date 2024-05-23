@@ -249,17 +249,7 @@ Remote Access Service (RAS) will allow clients on the internal network to access
    - Select the network interface that connects to the internet (INTERNET). This interface will be used for public (internet) access.
    - Click **Next**.
    - Click **Finish**.
-   - When prompted to start the service, click **Start service**.
 
-#### Step 3: Verify NAT Configuration
 
-1. **Open NAT Configuration**:
-   - In the Routing and Remote Access console, expand your server name, then expand **IPv4**, and click on **NAT**.
-
-2. **Verify Interfaces**:
-   - Ensure that the "External Network" interface is listed and configured as a public interface.
-   - Ensure that the "Internal Network" interface is listed and configured as a private interface.
-
-With these steps, your server is now configured with NAT, allowing clients on the internal network to access the internet through the domain controller.
 
 
