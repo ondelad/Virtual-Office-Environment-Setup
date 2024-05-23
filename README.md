@@ -230,57 +230,36 @@ Remote Access Service (RAS) will allow clients on the internal network to access
     - Click **Install**.
     - The installation will begin. Once complete, click **Close**.
 
-#### Step 2: Configure Remote Access
+#### Step 2: Configure Remote Access with NAT
 
 1. **Open Remote Access Management**:
    - In Server Manager, click **Tools**.
-   - Select **Remote Access Management**.
+   - Select **Routing and Remote Access**.
 
 2. **Run the Getting Started Wizard**:
-   - In the Remote Access Management Console, click on **Deploy VPN Only** under Step 2.
-
-3. **Configure Remote Access**:
    - In the Routing and Remote Access console, right-click on your server name and select **Configure and Enable Routing and Remote Access**.
 
-4. **Routing and Remote Access Setup Wizard**:
+3. **Routing and Remote Access Setup Wizard**:
    - Click **Next** to begin the wizard.
 
-5. **Configuration**:
-   - Select **Custom configuration** and click **Next**.
+4. **Configuration**:
+   - Select **Network Address Translation (NAT)** and click **Next**.
 
-6. **Custom Configuration**:
-   - Check the **VPN access** and **NAT** options, then click **Next**.
-
-7. **Finish and Start Service**:
+5. **Public Interface**:
+   - Select the network interface that connects to the internet (INTERNET). This interface will be used for public (internet) access.
+   - Click **Next**.
    - Click **Finish**.
    - When prompted to start the service, click **Start service**.
 
-#### Step 3: Configure NAT
+#### Step 3: Verify NAT Configuration
 
 1. **Open NAT Configuration**:
    - In the Routing and Remote Access console, expand your server name, then expand **IPv4**, and click on **NAT**.
 
-2. **Configure Public Interface**:
-   - Right-click on **NAT** and select **New Interface**.
-   - Select the **INTERNET** interface and click **OK**.
-   - In the dialog box that appears, select **Public interface connected to the Internet** and check **Enable NAT on this interface**.
-   - Click **OK**.
+2. **Verify Interfaces**:
+   - Ensure that the "External Network" interface is listed and configured as a public interface.
+   - Ensure that the "Internal Network" interface is listed and configured as a private interface.
 
-3. **Configure Private Interface**:
-   - Right-click on **NAT** and select **New Interface**.
-   - Select the **Internal Network** interface and click **OK**.
-   - In the dialog box that appears, select **Private interface connected to private network**.
-   - Click **OK**.
-
-#### Step 4: Configure VPN
-
-1. **Enable VPN Access**:
-   - In the Routing and Remote Access console, right-click your server name and select **Properties**.
-   - Go to the **Security** tab.
-   - Ensure **Allow custom IPSec policy for L2TP/IKEv2 connection** is unchecked unless you have a specific policy to apply.
-   - Click **OK**.
-
-
-With these steps, your server is now configured to allow clients on the internal network to access the internet through the domain controller.
+With these steps, your server is now configured with NAT, allowing clients on the internal network to access the internet through the domain controller.
 
 
