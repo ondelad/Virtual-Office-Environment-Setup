@@ -19,7 +19,7 @@ Before we start, ensure you have the following:
    - A stable internet connection for downloading necessary software and updates.
    - Basic understanding of network concepts and IP addressing.
 
-Next, we'll start with the installation of the virtualization software and setting up the virtual machine.
+Next, we'll start with installing the virtualization software and setting up the virtual machine.
 
 ## Step 1: Installing Windows Server 2019
 
@@ -85,7 +85,7 @@ Once you're logged in, the basic installation of Windows Server 2019 is complete
 
 4. **Verify Connectivity**:
    - Ensure that the "INTERNET" NIC has internet access.
-   - The "INTENAL" NIC should be isolated from the internet but able to communicate with internal clients.
+   - The "INTERNAL" NIC should be isolated from the internet but able to communicate with internal clients.
 
 Now that the NICs are configured, the server is set up to connect to the internet and to serve client machines on a private network.
 
@@ -133,7 +133,7 @@ After the server restarts, it will have the new name you assigned. This will mak
 
 6. **Select Server Roles**:
    - Scroll down and select **Active Directory Domain Services**.
-   - A dialog box will pop up to add required features. Click **Add Features**.
+   - A dialog box will pop up to add the required features. Click **Add Features**.
    - Click **Next**.
 
 7. **Select Features**:
@@ -207,7 +207,7 @@ Remote Access Service (RAS) will allow clients on the internal network to access
 
 6. **Select Server Roles**:
    - Scroll down and select **Remote Access**.
-   - A dialog box will pop up to add required features. Click **Add Features**.
+   - A dialog box will pop up to add the required features. Click **Add Features**.
    - Click **Next**.
 
 7. **Select Features**:
@@ -275,7 +275,7 @@ Setting up DHCP (Dynamic Host Configuration Protocol) on your Windows Server 201
 
 6. **Select Server Roles**:
    - Scroll down and select **DHCP Server**.
-   - A dialog box will pop up to add required features. Click **Add Features**.
+   - A dialog box will pop up to add the required features. Click **Add Features**.
    - Click **Next**.
 
 7. **Select Features**:
@@ -366,8 +366,8 @@ To manage your network effectively, you'll need a dedicated administrative accou
    - Select **New**, then click **User**.
 
 4. **New Object - User Wizard**:
-   - **First Name**: Enter the first name of the user (e.g., Admin).
-   - **Last Name**: Enter the last name of the user (e.g., Account).
+   - **First Name**: Enter the user's first name (e.g., Admin).
+   - **Last Name**: Enter the user's last name (e.g., Account).
    - **Full Name**: This field will be automatically populated based on the first and last name.
    - **User Logon Name**: Enter the logon name (e.g., admin).
    - Click **Next**.
@@ -378,8 +378,7 @@ To manage your network effectively, you'll need a dedicated administrative accou
    - Select the appropriate password options (e.g., **User must change password at next logon**, **User cannot change password**, **Password never expires**).
    - Click **Next**.
 
-6. **Finish**:
-   - Review the information and click **Finish** to create the new user account.
+6. Review the information and click **Finish** to create the new user account.
 
 #### Step 2: Add the New User to the Domain Admins Group
 
@@ -410,4 +409,44 @@ To manage your network effectively, you'll need a dedicated administrative accou
 
 By following these steps, you will have created a new administrative account and granted it Domain Admins privileges, allowing it to manage the domain effectively.
 
+### Creating Four Normal User Accounts
 
+To create normal user accounts in Active Directory, follow these steps:
+
+#### Step 1: Open Active Directory Users and Computers
+
+1. **Open Active Directory Users and Computers**:
+   - Click on the **Start** menu.
+   - Select **Administrative Tools** (or **Windows Administrative Tools**), then click **Active Directory Users and Computers**.
+
+2. **Navigate to the Users Container**:
+   - In the Active Directory Users and Computers console, expand your domain (e.g., example.com).
+   - Click on the **Users** container.
+
+#### Step 2: Create a New User Account
+
+For each user, repeat the following steps:
+
+1. **Create a New User**:
+   - Right-click on the **Users** container.
+   - Select **New**, then click **User**.
+
+2. **New Object - User Wizard**:
+   - **First Name**: Enter the user's first name (e.g., John).
+   - **Last Name**: Enter the user's last name (e.g., Doe).
+   - **Full Name**: This field will be automatically populated based on the first and last name.
+   - **User Logon Name**: Enter the logon name (e.g., johndoe).
+   - Click **Next**.
+
+3. **Password Setup**:
+   - Enter a password for the new account.
+   - Confirm the password.
+   - Select the appropriate password options (e.g., **User must change password at next logon**, **User cannot change password**, **Password never expires**).
+   - Click **Next**.
+
+4. **Finish**:
+   - Review the information and click **Finish** to create the new user account.
+
+Continue the process until all four users have been created.
+
+By following these steps, you will have created four normal user accounts in Active Directory. These users can now log in to the domain with their respective credentials.
