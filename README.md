@@ -347,6 +347,67 @@ Click on the **notification flag** and then click on **Promote this server to a 
 
 Your DHCP server is now configured and active. Clients on your network should automatically receive IP addresses within the specified range.
 
-Let me know when you're ready to proceed to the next step!
+### Creating an Administrative Account and Making it a Member of Domain Admins
+
+To manage your network effectively, you'll need a dedicated administrative account that has elevated permissions. Here’s how to create this account and make it a member of the Domain Admins group:
+
+#### Step 1: Create a New User Account
+
+1. **Open Active Directory Users and Computers**:
+   - Click on the **Start** menu.
+   - Select **Administrative Tools** (or **Windows Administrative Tools**), then click **Active Directory Users and Computers**.
+
+2. **Navigate to the Users Container**:
+   - In the Active Directory Users and Computers console, expand your domain (e.g., example.com).
+   - Click on the **Users** container.
+
+3. **Create a New User**:
+   - Right-click on the **Users** container.
+   - Select **New**, then click **User**.
+
+4. **New Object - User Wizard**:
+   - **First Name**: Enter the first name of the user (e.g., Admin).
+   - **Last Name**: Enter the last name of the user (e.g., Account).
+   - **Full Name**: This field will be automatically populated based on the first and last name.
+   - **User Logon Name**: Enter the logon name (e.g., admin).
+   - Click **Next**.
+
+5. **Password Setup**:
+   - Enter a password for the new account.
+   - Confirm the password.
+   - Select the appropriate password options (e.g., **User must change password at next logon**, **User cannot change password**, **Password never expires**).
+   - Click **Next**.
+
+6. **Finish**:
+   - Review the information and click **Finish** to create the new user account.
+
+#### Step 2: Add the New User to the Domain Admins Group
+
+1. **Open the Properties of the New User**:
+   - In the Active Directory Users and Computers console, locate the new user account you created (e.g., Admin Account).
+   - Right-click on the user account and select **Properties**.
+
+2. **Navigate to the Member Of Tab**:
+   - In the user properties window, click on the **Member Of** tab.
+
+3. **Add to Domain Admins Group**:
+   - Click the **Add** button.
+   - In the **Select Groups** dialog box, type **Domain Admins** and click **Check Names**.
+   - If the group name resolves correctly, click **OK**.
+
+4. **Confirm Membership**:
+   - The Domain Admins group should now be listed in the **Member Of** tab.
+   - Click **OK** to close the properties window.
+
+#### Step 3: Verify the Administrative Privileges
+
+1. **Log Off and Log On**:
+   - Log off from the current session.
+   - Log on with the new administrative account (e.g., admin@example.com).
+
+2. **Verify Administrative Access**:
+   - Ensure the new account has the appropriate administrative rights by performing tasks that require elevated privileges (e.g., opening Server Manager, accessing Active Directory Users and Computers).
+
+By following these steps, you will have created a new administrative account and granted it Domain Admins privileges, allowing it to manage the domain effectively.
 
 
