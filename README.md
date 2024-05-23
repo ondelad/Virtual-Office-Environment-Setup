@@ -250,6 +250,103 @@ Remote Access Service (RAS) will allow clients on the internal network to access
    - Click **Next**.
    - Click **Finish**.
 
+### Setting Up DHCP
 
+Setting up DHCP (Dynamic Host Configuration Protocol) on your Windows Server 2019 will allow computers on the network to automatically obtain IP addresses. Here’s how to do it:
+
+#### Step 1: Install the DHCP Server Role
+
+1. **Open Server Manager**:
+   - Click on the **Start** menu.
+   - Select **Server Manager**.
+
+2. **Add Roles and Features**:
+   - In Server Manager, click on **Manage** in the upper-right corner.
+   - Select **Add Roles and Features**.
+
+3. **Before You Begin**:
+   - Click **Next** on the "Before You Begin" page.
+
+4. **Select Installation Type**:
+   - Choose **Role-based or feature-based installation** and click **Next**.
+
+5. **Select Destination Server**:
+   - Ensure your server is selected in the server pool and click **Next**.
+
+6. **Select Server Roles**:
+   - Scroll down and select **DHCP Server**.
+   - A dialog box will pop up to add required features. Click **Add Features**.
+   - Click **Next**.
+
+7. **Select Features**:
+   - Click **Next** on the "Select Features" page.
+
+8. **DHCP Server**:
+   - Click **Next** on the DHCP Server page.
+
+9. **Confirm Installation Selections**:
+   - Click **Install**.
+   - The installation will begin. Once complete, click **Complete DHCP configuration**.
+
+#### Step 2: Complete DHCP Configuration
+Click on the **notification flag** and then click on **Promote this server to a domain controller**.
+
+1. **Post-Install Configuration**:
+   - In the **DHCP Post-Install Configuration Wizard**, click **Next**.
+
+2. **Authorize DHCP Server**:
+   - Ensure your administrator credentials are correct and click **Commit**.
+   - Click **Close**
+
+#### Step 3: Configure DHCP Scope
+
+1. **Open DHCP Management**:
+   - In Server Manager, click **Tools**.
+   - Select **DHCP**.
+
+2. **Create a New Scope**:
+   - In the DHCP console, expand your server name.
+   - Right-click on **IPv4** and select **New Scope**.
+
+3. **New Scope Wizard**:
+   - Click **Next** to start the wizard.
+
+4. **Scope Name**:
+   - Enter a name and description for the scope (e.g., "Internal Network Scope") and click **Next**.
+
+5. **IP Address Range**:
+   - Enter the IP address range that clients will use. For example:
+     - Start IP address: 192.168.0.10
+     - End IP address: 192.168.0.100
+   - Enter the **Subnet mask** (e.g., 255.255.255.0) and click **Next**.
+
+6. **Add Exclusions and Delay**:
+   - If you have any IP addresses within the range that you want to exclude (e.g., static IPs for servers), add them here. Otherwise, click **Next**.
+
+7. **Lease Duration**:
+   - Specify the lease duration for IP addresses (default is 8 days) and click **Next**.
+
+8. **Configure DHCP Options**:
+   - Select **Yes, I want to configure these options now** and click **Next**.
+
+9. **Router (Default Gateway)**:
+   - Enter the IP address of the router or gateway for your network (e.g., 192.168.0.1) and click **Add**, then **Next**.
+
+10. **Domain Name and DNS Servers**:
+    - Enter your domain name (e.g., example.com).
+    - Enter the IP address of your DNS server (usually the same as your domain controller) and click **Add**, then **Next**.
+
+11. **WINS Servers**:
+    - If you use WINS, enter the IP address of your WINS server. Otherwise, click **Next**.
+
+12. **Activate Scope**:
+    - Select **Yes, I want to activate this scope now** and click **Next**.
+
+13. **Finish**:
+    - Click **Finish** to complete the wizard.
+
+Your DHCP server is now configured and active. Clients on your network should automatically receive IP addresses within the specified range.
+
+Let me know when you're ready to proceed to the next step!
 
 
