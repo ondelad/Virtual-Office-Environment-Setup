@@ -112,4 +112,175 @@ Renaming your server will help in identifying it easily on the network.
 
 After the server restarts, it will have the new name you assigned. This will make it easier to manage and identify on your network.
 
+## Step 4: Installing Active Directory and Creating a Domain
+
+1. **Open Server Manager**:
+   - Click on the **Start** menu.
+   - Select **Server Manager**.
+
+2. **Add Roles and Features**:
+   - In Server Manager, click on **Manage** in the upper-right corner.
+   - Select **Add Roles and Features**.
+
+3. **Before You Begin**:
+   - Click **Next** on the "Before You Begin" page.
+
+4. **Select Installation Type**:
+   - Choose **Role-based or feature-based installation** and click **Next**.
+
+5. **Select Destination Server**:
+   - Ensure your server is selected in the server pool and click **Next**.
+
+6. **Select Server Roles**:
+   - Scroll down and select **Active Directory Domain Services**.
+   - A dialog box will pop up to add required features. Click **Add Features**.
+   - Click **Next**.
+
+7. **Select Features**:
+   - Click **Next** on the "Select Features" page.
+
+8. **Active Directory Domain Services**:
+   - Click **Next** on the AD DS page.
+
+9. **Confirm Installation Selections**:
+   - Click **Install**.
+   - The installation will begin. Once complete, click **Close**.
+
+#### Step 2: Promote the Server to a Domain Controller
+
+1. **Post-Deployment Configuration**:
+   - In Server Manager, you will see a yellow notification flag indicating that there is a post-deployment configuration pending.
+   - Click on the **notification flag** and then click on **Promote this server to a domain controller**.
+
+2. **Deployment Configuration**:
+   - Select **Add a new forest**.
+   - In the **Root domain name** field, enter the name for your new domain (e.g., "mydomain.com").
+   - Click **Next**.
+
+3. **Domain Controller Options**:
+   - Choose a **forest functional level** and **domain functional level** (Windows Server 2016 is recommended).
+   - Ensure **Domain Name System (DNS) server** and **Global Catalog (GC)** are selected.
+   - Enter a **DSRM password** (Directory Services Restore Mode password) and click **Next**.
+
+4. **DNS Options**:
+   - Click **Next** on the DNS options page. You may see a warning about a delegation for this DNS server; you can safely ignore this for now.
+
+5. **Additional Options**:
+   - The NetBIOS domain name will be automatically filled based on your domain name. Verify it and click **Next**.
+
+6. **Paths**:
+   - Accept the default paths for the database, log files, and SYSVOL, and click **Next**.
+
+7. **Review Options**:
+   - Review your selections and click **Next**.
+
+8. **Prerequisites Check**:
+   - The wizard will run a prerequisites check. If everything passes, click **Install** to begin the promotion.
+
+9. **Complete Installation and Restart**:
+   - The server will install the necessary components and then automatically restart.
+
+Once the server restarts, it will be a domain controller for your new domain.
+
+## Step 5: Installing and Configuring Remote Access Service (RAS)
+
+Remote Access Service (RAS) will allow clients on the internal network to access the internet through the domain controller.
+
+#### Step 1: Install Remote Access Role
+
+1. **Open Server Manager**:
+   - Click on the **Start** menu.
+   - Select **Server Manager**.
+
+2. **Add Roles and Features**:
+   - In Server Manager, click on **Manage** in the upper-right corner.
+   - Select **Add Roles and Features**.
+
+3. **Before You Begin**:
+   - Click **Next** on the "Before You Begin" page.
+
+4. **Select Installation Type**:
+   - Choose **Role-based or feature-based installation** and click **Next**.
+
+5. **Select Destination Server**:
+   - Ensure your server is selected in the server pool and click **Next**.
+
+6. **Select Server Roles**:
+   - Scroll down and select **Remote Access**.
+   - A dialog box will pop up to add required features. Click **Add Features**.
+   - Click **Next**.
+
+7. **Select Features**:
+   - Click **Next** on the "Select Features" page.
+
+8. **Remote Access**:
+   - Click **Next** on the Remote Access page.
+
+9. **Role Services**:
+   - Select **DirectAccess and VPN (RAS)**.
+   - Click **Next**.
+
+10. **Web Server (IIS)**:
+    - Click **Next** on the Web Server (IIS) page.
+
+11. **Role Services**:
+    - Accept the default selections and click **Next**.
+
+12. **Confirm Installation Selections**:
+    - Click **Install**.
+    - The installation will begin. Once complete, click **Close**.
+
+#### Step 2: Configure Remote Access
+
+1. **Open Remote Access Management**:
+   - In Server Manager, click **Tools**.
+   - Select **Remote Access Management**.
+
+2. **Run the Getting Started Wizard**:
+   - In the Remote Access Management Console, click on **Deploy VPN Only** under Step 2.
+
+3. **Configure Remote Access**:
+   - In the Routing and Remote Access console, right-click on your server name and select **Configure and Enable Routing and Remote Access**.
+
+4. **Routing and Remote Access Setup Wizard**:
+   - Click **Next** to begin the wizard.
+
+5. **Configuration**:
+   - Select **Custom configuration** and click **Next**.
+
+6. **Custom Configuration**:
+   - Check the **VPN access** and **NAT** options, then click **Next**.
+
+7. **Finish and Start Service**:
+   - Click **Finish**.
+   - When prompted to start the service, click **Start service**.
+
+#### Step 3: Configure NAT
+
+1. **Open NAT Configuration**:
+   - In the Routing and Remote Access console, expand your server name, then expand **IPv4**, and click on **NAT**.
+
+2. **Configure Public Interface**:
+   - Right-click on **NAT** and select **New Interface**.
+   - Select the **INTERNET** interface and click **OK**.
+   - In the dialog box that appears, select **Public interface connected to the Internet** and check **Enable NAT on this interface**.
+   - Click **OK**.
+
+3. **Configure Private Interface**:
+   - Right-click on **NAT** and select **New Interface**.
+   - Select the **Internal Network** interface and click **OK**.
+   - In the dialog box that appears, select **Private interface connected to private network**.
+   - Click **OK**.
+
+#### Step 4: Configure VPN
+
+1. **Enable VPN Access**:
+   - In the Routing and Remote Access console, right-click your server name and select **Properties**.
+   - Go to the **Security** tab.
+   - Ensure **Allow custom IPSec policy for L2TP/IKEv2 connection** is unchecked unless you have a specific policy to apply.
+   - Click **OK**.
+
+
+With these steps, your server is now configured to allow clients on the internal network to access the internet through the domain controller.
+
 
