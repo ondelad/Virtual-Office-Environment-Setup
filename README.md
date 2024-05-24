@@ -252,7 +252,7 @@ Remote Access Service (RAS) will allow clients on the internal network to access
 
 ### Setting Up DHCP
 
-Setting up DHCP (Dynamic Host Configuration Protocol) on your Windows Server 2019 will allow computers on the network to automatically obtain IP addresses. Here’s how to do it:
+Setting up DHCP on your Windows Server 2019 will allow computers on the network to automatically obtain IP addresses.
 
 #### Step 1: Install the DHCP Server Role
 
@@ -409,9 +409,9 @@ To manage your network effectively, you'll need a dedicated administrative accou
 
 By following these steps, you will have created a new administrative account and granted it Domain Admins privileges, allowing it to manage the domain effectively.
 
-### Creating Four Normal User Accounts
+### Creating User Accounts
 
-To create normal user accounts in Active Directory, follow these steps:
+Let's create four user accounts in Active Directory.
 
 #### Step 1: Open Active Directory Users and Computers
 
@@ -441,7 +441,7 @@ For each user, repeat the following steps:
 3. **Password Setup**:
    - Enter a password for the new account.
    - Confirm the password.
-   - Select the appropriate password options (e.g., **User must change password at next logon**, **User cannot change password**, **Password never expires**).
+   - Select **User must change password at next logon**.
    - Click **Next**.
 
 4. **Finish**:
@@ -450,3 +450,5 @@ For each user, repeat the following steps:
 Continue the process until all four users have been created.
 
 By following these steps, you will have created four normal user accounts in Active Directory. These users can now log in to the domain with their respective credentials.
+
+
