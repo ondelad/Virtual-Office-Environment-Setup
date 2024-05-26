@@ -55,6 +55,8 @@ Next, we'll start with installing the virtualization software and setting up the
      
    - **Edition**: Select the Windows Server 2019 Standard Datacenter.
    - **License Agreement**: Accept the license terms and click "Next".
+  ![](images/gif02.gif)
+     
    - **Installation Type**: Choose "Custom: Install Windows only (advanced)".
    - **Partition**: Select the unallocated space and click "Next". The installer will create the necessary partitions and start the installation.
 
