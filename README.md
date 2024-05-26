@@ -59,6 +59,8 @@ Next, we'll start with installing the virtualization software and setting up the
      
    - **Installation Type**: Choose "Custom: Install Windows only (advanced)".
    - **Partition**: Select the unallocated space and click "Next". The installer will create the necessary partitions and start the installation.
+  ![](images/gif03.gif)
+     
 
 7. **Complete Installation**:
    - The installation process will take several minutes. Once complete, the system will restart.
