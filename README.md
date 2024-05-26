@@ -51,19 +51,17 @@ Next, we'll start with installing the virtualization software and setting up the
    - **Language, Time, and Keyboard**: Choose your preferences and click "Next".
    - **Install Now**: Click the "Install Now" button.
   ![](images/gif01.gif)
-
-     
+    
    - **Edition**: Select the Windows Server 2019 Standard Datacenter.
    - **License Agreement**: Accept the license terms and click "Next".
   ![](images/gif02.gif)
      
    - **Installation Type**: Choose "Custom: Install Windows only (advanced)".
-   - **Partition**: Select the unallocated space and click "Next". The installer will create the necessary partitions and start the installation.
+   - **Partition**: Select the "Unallocated Space" and click "Next". The installer will create the necessary partitions and start the installation.
    - The installation process will take several minutes. Once complete, the system will restart twice. Please do not press any buttons during this process.
      
-  ![](images/gif03.gif)
-     
-
+     ![](images/gif03.gif)
+             
 7. **Complete Installation**:
    
    - **Initial Configuration**: After the restart, set a strong password for the Administrator account.
