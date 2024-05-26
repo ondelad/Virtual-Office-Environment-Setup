@@ -77,7 +77,7 @@ Once you're logged in, the basic installation of Windows Server 2019 is complete
 3. **Configure Internal Network NIC**:
    - Right-click on "INTERNAL" and select **Properties**.
    - Select **Internet Protocol Version 4 (TCP/IPv4)** and click **Properties**.
-   - Assign a static IP address. For example:
+   - Assign a static IP address:
      - IP address: 192.168.0.1
      - Subnet mask: 255.255.255.0
      - DNS server: 127.0.0.1
