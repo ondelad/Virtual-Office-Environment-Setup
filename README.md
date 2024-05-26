@@ -59,11 +59,12 @@ Next, we'll start with installing the virtualization software and setting up the
      
    - **Installation Type**: Choose "Custom: Install Windows only (advanced)".
    - **Partition**: Select the unallocated space and click "Next". The installer will create the necessary partitions and start the installation.
+   - The installation process will take several minutes. Once complete, the system will restart twice. Please do not press any buttons during this process.
   ![](images/gif03.gif)
      
 
 7. **Complete Installation**:
-   - The installation process will take several minutes. Once complete, the system will restart.
+   
    - **Initial Configuration**: After the restart, set a strong password for the Administrator account.
 
 8. Login with the Administrator account using the password you set.
