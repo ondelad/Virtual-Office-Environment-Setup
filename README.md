@@ -50,6 +50,8 @@ Next, we'll start with installing the virtualization software and setting up the
 6. **Windows Server 2019 Installation**:
    - **Language, Time, and Keyboard**: Choose your preferences and click "Next".
    - **Install Now**: Click the "Install Now" button.
+  ![](new_images/gif01.gif)
+   - 
    - **Edition**: Select the Windows Server 2019 Standard Datacenter.
    - **License Agreement**: Accept the license terms and click "Next".
    - **Installation Type**: Choose "Custom: Install Windows only (advanced)".
