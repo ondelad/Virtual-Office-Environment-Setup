@@ -65,7 +65,7 @@ Next, we'll start with installing the virtualization software and setting up the
    - After the restart, set a strong password for the Administrator account.
    - Login with the Administrator account using the password you set.
     
-  ![](images/gif04.gif)
+     ![](images/gif04.gif)
         
 Once you're logged in, the basic installation of Windows Server 2019 is complete.
 
@@ -79,7 +79,7 @@ Once you're logged in, the basic installation of Windows Server 2019 is complete
 2. **Rename NICs for easier identification**:
    - Right-click "Ethernet" and select "Rename". Change the name to "INTERNET"
    - Right-click "Ethernet 2" and select "Rename". Change the name to "INTERNAL"
-  ![](images/gif05.gif)
+     ![](images/gif05.gif)
     
 3. **Configure Internal Network NIC**:
    - Right-click on "INTERNAL" and select **Properties**.
