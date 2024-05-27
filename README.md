@@ -67,7 +67,6 @@ Next, we'll start with installing the virtualization software and setting up the
     
   ![](images/gif04.gif)
         
-
 Once you're logged in, the basic installation of Windows Server 2019 is complete.
 
 ## Step 3: Configure NICs in Windows Server 2019
@@ -78,9 +77,10 @@ Once you're logged in, the basic installation of Windows Server 2019 is complete
    - Click on **Change adapter settings** on the left side.
 
 2. **Rename NICs for easier identification**:
-   - **NIC 1**: Rename "Ethernet" to "INTERNET".
-   - **NIC 2**: Rename "Ethernet 2" to "INTERNAL".
-
+   - Right-click "Ethernet" and select "Rename". Change the name to "INTERNET"
+   - Right-click "Ethernet 2" and select "Rename". Change the name to "INTERNAL"
+  ![](images/gif05.gif)
+    
 3. **Configure Internal Network NIC**:
    - Right-click on "INTERNAL" and select **Properties**.
    - Select **Internet Protocol Version 4 (TCP/IPv4)** and click **Properties**.
