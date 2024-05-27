@@ -62,11 +62,11 @@ Next, we'll start with installing the virtualization software and setting up the
      
      ![](images/gif03.gif)
              
-7. **Complete Installation**:
-   
-   - **Initial Configuration**: After the restart, set a strong password for the Administrator account.
-
-8. Login with the Administrator account using the password you set.
+   - After the restart, set a strong password for the Administrator account.
+   - Login with the Administrator account using the password you set.
+    
+  ![](images/gif04.gif)
+        
 
 Once you're logged in, the basic installation of Windows Server 2019 is complete.
 
