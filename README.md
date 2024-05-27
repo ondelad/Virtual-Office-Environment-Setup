@@ -21,7 +21,7 @@ Before we start, ensure you have the following:
 
 Next, we'll start with installing the virtualization software and setting up the virtual machine.
 
-## Step 1: Installing Windows Server 2019
+## Step 2: Installing Windows Server 2019
 
 1. **Create a New Virtual Machine**:
    - Open your virtualization software (e.g., VMware Workstation or VirtualBox).
@@ -70,7 +70,7 @@ Next, we'll start with installing the virtualization software and setting up the
 
 Once you're logged in, the basic installation of Windows Server 2019 is complete.
 
-## Step 2: Configure NICs in Windows Server 2019
+## Step 3: Configure NICs in Windows Server 2019
 
 1. **Open Network Connections**:
    - Open the **Control Panel**.
