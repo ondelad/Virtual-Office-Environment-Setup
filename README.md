@@ -89,6 +89,8 @@ Once you're logged in, the basic installation of Windows Server 2019 is complete
      - Subnet mask: 255.255.255.0
      - DNS server: 127.0.0.1
      - Leave the default gateway field empty.
+    ![](images/gif06.gif)
+       
 
 4. **Verify Connectivity**:
    - Ensure that the "INTERNET" NIC has internet access.
@@ -99,16 +101,8 @@ Now that the NICs are configured, the server is set up to connect to the interne
 ## Step 3: Rename the Windows Server Machine
 Renaming your server will help in identifying it easily on the network.
 
-1. **Open Server Manager**:
-   - Click on the **Start** menu.
-   - Select **Server Manager**.
-
-2. **Navigate to the System Properties**:
-   - In Server Manager, click on **Local Server** on the left panel.
-   - In the **Properties** section, click on the current **Computer Name**.
-
 3. **Change Computer Name**:
-   - In the **System Properties** window, click the **Change** button.
+   - Right-click the Start button. Select System. In the **System Properties** window, click the **Change** button.
    - In the **Computer Name/Domain Changes** window, enter a new name for your server in the **Computer name** field (e.g. "DC").
    - Click **OK**.
 
