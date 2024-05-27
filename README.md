@@ -49,15 +49,15 @@ Next, we'll start with installing the virtualization software and setting up the
 
 6. **Windows Server 2019 Installation**:
    - **Language, Time, and Keyboard**: Choose your preferences and click "Next".
-   - **Install Now**: Click the "Install Now" button.
+   - Click the **Install Now** button.
   ![](images/gif01.gif)
     
-   - **Edition**: Select the Windows Server 2019 Standard Datacenter.
+   - Select **Windows Server 2019 Standard Datacenter**.
    - **License Agreement**: Accept the license terms and click "Next".
   ![](images/gif02.gif)
      
-   - **Installation Type**: Choose "Custom: Install Windows only (advanced)".
-   - **Partition**: Select the "Unallocated Space" and click "Next". The installer will create the necessary partitions and start the installation.
+   - Choose **Custom: Install Windows only (advanced)**.
+   - Select **Unallocated Space** and click **Next**. The installer will create the necessary partitions and start the installation.
    - The installation process will take several minutes. Once complete, the system will restart twice. Please do not press any buttons during this process.
      
      ![](images/gif03.gif)
@@ -77,8 +77,8 @@ Once you're logged in, the basic installation of Windows Server 2019 is complete
    - Click on **Change adapter settings** on the left side.
 
 2. **Rename NICs for easier identification**:
-   - Right-click "Ethernet" and select "Rename". Change the name to "INTERNET"
-   - Right-click "Ethernet 2" and select "Rename". Change the name to "INTERNAL"
+   - Right-click **Ethernet** and select **Rename**. Change the name to "INTERNET"
+   - Right-click **Ethernet 2** and select **Rename**. Change the name to "INTERNAL"
      ![](images/gif05.gif)
     
 3. **Configure Internal Network NIC**:
