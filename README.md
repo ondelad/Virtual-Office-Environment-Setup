@@ -145,7 +145,8 @@ After the server restarts, it will have the new name you assigned. This will mak
 
 9. Click **Install**.
 10. Once complete, click **Close**.
-![](images/gif08.gif)
+
+    ![](images/gif08.gif)
 
 
 #### Step 2: Promote the Server to a Domain Controller
@@ -153,14 +154,16 @@ After the server restarts, it will have the new name you assigned. This will mak
 1. **Post-Deployment Configuration**:
    - In Server Manager, you will see a yellow notification flag indicating that there is a post-deployment configuration pending.
    - Click on the **notification flag** and then click on **Promote this server to a domain controller**.
-  ![](images/gif09.gif)
+   
+     ![](images/gif09.gif)
      
 
 2. **Deployment Configuration**:
    - Select **Add a new forest**.
    - In the **Root domain name** field, enter the name for your new domain (e.g., "mydomain.com").
    - Click **Next**.
-  
+   
+     ![](images/gif10.gif)
      
 
 3. **Domain Controller Options**:
