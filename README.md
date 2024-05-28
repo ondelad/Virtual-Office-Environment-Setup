@@ -171,23 +171,18 @@ After the server restarts, it will have the new name you assigned. This will mak
    - Ensure **Domain Name System (DNS) server** and **Global Catalog (GC)** are selected.
    - Enter a **DSRM password** (Directory Services Restore Mode password) and click **Next**.
 
-4. **DNS Options**:
-   - Click **Next** on the DNS options page. You may see a warning about a delegation for this DNS server; you can safely ignore this for now.
+4. Click **Next** on the DNS options page. You may see a warning about a delegation for this DNS server; you can safely ignore this for now.
 
-5. **Additional Options**:
-   - The NetBIOS domain name will be automatically filled based on your domain name. Verify it and click **Next**.
+5. The NetBIOS domain name will be automatically filled based on your domain name. Click **Next**.
 
-6. **Paths**:
-   - Accept the default paths for the database, log files, and SYSVOL, and click **Next**.
+6. Accept the default paths for the database, log files, and SYSVOL, and click **Next**.
 
-7. **Review Options**:
-   - Review your selections and click **Next**.
+7. Review your selections and click **Next**.
 
 8. **Prerequisites Check**:
    - The wizard will run a prerequisites check. If everything passes, click **Install** to begin the promotion.
 
-9. **Complete Installation and Restart**:
-   - The server will install the necessary components and then automatically restart.
+9. The server will install the necessary components and then automatically restart.
 
 Once the server restarts, it will be a domain controller for your new domain.
 
