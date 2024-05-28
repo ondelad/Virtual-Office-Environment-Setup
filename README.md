@@ -136,6 +136,8 @@ After the server restarts, it will have the new name you assigned. This will mak
    - Scroll down and select **Active Directory Domain Services**.
    - A dialog box will pop up to add the required features. Click **Add Features**.
    - Click **Next**.
+  ![](images/gif07.gif)
+     
 
 7. **Select Features**:
    - Click **Next** on the "Select Features" page.
