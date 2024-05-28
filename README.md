@@ -57,7 +57,7 @@ Next, we'll start with installing the virtualization software and setting up the
   ![](images/gif02.gif)
      
    - Choose **Custom: Install Windows only (advanced)**.
-   - Select **Unallocated Space** and click **Next**. The installer will create the necessary partitions and start the installation.
+   - Select **Unallocated Space** and click **Next**.
    - The installation process will take several minutes. Once complete, the system will restart twice. Please do not press any buttons during this process.
      
      ![](images/gif03.gif)
@@ -119,12 +119,9 @@ After the server restarts, it will have the new name you assigned. This will mak
    - Click on the **Start** menu.
    - Select **Server Manager**.
 
-2. **Add Roles and Features**:
-   - In Server Manager, click on **Manage** in the upper-right corner.
-   - Select **Add Roles and Features**.
+2. Select **Add Roles and Features**.
 
-3. **Before You Begin**:
-   - Click **Next** on the "Before You Begin" page.
+3. Click **Next** on the "Before You Begin" page.
 
 4. **Select Installation Type**:
    - Choose **Role-based or feature-based installation** and click **Next**.
@@ -152,7 +149,7 @@ After the server restarts, it will have the new name you assigned. This will mak
 #### Step 2: Promote the Server to a Domain Controller
 
 1. **Post-Deployment Configuration**:
-   - In Server Manager, you will see a yellow notification flag indicating that there is a post-deployment configuration pending.
+   - In Server Manager, you will see a yellow notification flag indicating a post-deployment configuration pending.
    - Click on the **notification flag** and then click on **Promote this server to a domain controller**.
    
      ![](images/gif09.gif)
@@ -167,22 +164,19 @@ After the server restarts, it will have the new name you assigned. This will mak
      
 
 3. **Domain Controller Options**:
-   - Choose a **forest functional level** and **domain functional level** (Windows Server 2016 is recommended).
-   - Ensure **Domain Name System (DNS) server** and **Global Catalog (GC)** are selected.
-   - Enter a **DSRM password** (Directory Services Restore Mode password) and click **Next**.
+   - Enter a **Directory Services Restore Mode(DSRM)** password and click **Next**.
 
-4. Click **Next** on the DNS options page. You may see a warning about a delegation for this DNS server; you can safely ignore this for now.
+5. Click **Next** on the DNS options page. You may see a warning about a delegation for this DNS server; you can ignore this for now.
 
-5. The NetBIOS domain name will be automatically filled based on your domain name. Click **Next**.
+6. The NetBIOS domain name will be automatically filled based on your domain name. Click **Next**.
 
-6. Accept the default paths for the database, log files, and SYSVOL, and click **Next**.
+7. Accept the default paths for the database, log files, and SYSVOL, and click **Next**.
 
-7. Review your selections and click **Next**.
+8. Review your selections and click **Next**.
 
-8. **Prerequisites Check**:
-   - The wizard will run a prerequisites check. If everything passes, click **Install** to begin the promotion.
+9. Click **Install** to begin the promotion.
 
-9. The server will install the necessary components and then automatically restart.
+10. The server will install the necessary components and then automatically restart.
 
 Once the server restarts, it will be a domain controller for your new domain.
 
@@ -196,12 +190,9 @@ Remote Access Service (RAS) will allow clients on the internal network to access
    - Click on the **Start** menu.
    - Select **Server Manager**.
 
-2. **Add Roles and Features**:
-   - In Server Manager, click on **Manage** in the upper-right corner.
-   - Select **Add Roles and Features**.
+2. Select **Add Roles and Features**.
 
-3. **Before You Begin**:
-   - Click **Next** on the "Before You Begin" page.
+3. Click **Next** on the "Before You Begin" page.
 
 4. **Select Installation Type**:
    - Choose **Role-based or feature-based installation** and click **Next**.
@@ -346,8 +337,7 @@ Click on the **notification flag** and then click on **Promote this server to a 
 12. **Activate Scope**:
     - Select **Yes, I want to activate this scope now** and click **Next**.
 
-13. **Finish**:
-    - Click **Finish** to complete the wizard.
+13. Click **Finish** to complete the wizard.
 
 Your DHCP server is now configured and active. Clients on your network should automatically receive IP addresses within the specified range.
 
