@@ -136,29 +136,32 @@ After the server restarts, it will have the new name you assigned. This will mak
    - Scroll down and select **Active Directory Domain Services**.
    - A dialog box will pop up to add the required features. Click **Add Features**.
    - Click **Next**.
-  ![](images/gif07.gif)
+   
+     ![](images/gif07.gif)
      
 
-7. **Select Features**:
-   - Click **Next** on the "Select Features" page.
+7. Click **Next** on the "Select Features" page.
+8. Click **Next** on the AD DS page.
 
-8. **Active Directory Domain Services**:
-   - Click **Next** on the AD DS page.
+9. Click **Install**.
+10. Once complete, click **Close**.
+![](images/gif08.gif)
 
-9. **Confirm Installation Selections**:
-   - Click **Install**.
-   - The installation will begin. Once complete, click **Close**.
 
 #### Step 2: Promote the Server to a Domain Controller
 
 1. **Post-Deployment Configuration**:
    - In Server Manager, you will see a yellow notification flag indicating that there is a post-deployment configuration pending.
    - Click on the **notification flag** and then click on **Promote this server to a domain controller**.
+  ![](images/gif09.gif)
+     
 
 2. **Deployment Configuration**:
    - Select **Add a new forest**.
    - In the **Root domain name** field, enter the name for your new domain (e.g., "mydomain.com").
    - Click **Next**.
+  
+     
 
 3. **Domain Controller Options**:
    - Choose a **forest functional level** and **domain functional level** (Windows Server 2016 is recommended).
