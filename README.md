@@ -205,7 +205,7 @@ Remote Access Service (RAS) will allow clients on the internal network to access
    - Scroll down and select **Remote Access**.
    - Click **Next**.
    
-  ![](images/gif11.gif)
+     ![](images/gif11.gif)
 
      
 7. Click **Next** on the "Select Features" page.
@@ -213,11 +213,11 @@ Remote Access Service (RAS) will allow clients on the internal network to access
 9. Click **Next** on the Remote Access page.
 
 10. **Role Services**:
-   - Select **DirectAccess and VPN (RAS)**.
-   - Click **Add Features**.
-   - Click **Next**.
+    - Select **DirectAccess and VPN (RAS)**.
+    - Click **Add Features**.
+    - Click **Next**.
 
-  ![](images/gif12.gif)
+      ![](images/gif12.gif)
 
      
 11. Click **Next** on the Web Server (IIS) page.
