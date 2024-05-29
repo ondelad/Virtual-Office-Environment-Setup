@@ -237,11 +237,14 @@ Remote Access Service (RAS) will allow clients on the internal network to access
    - In Server Manager, click **Tools**.
    - Select **Routing and Remote Access**.
 
-2. **Run the Getting Started Wizard**:
-   - In the Routing and Remote Access console, right-click on your server name and select **Configure and Enable Routing and Remote Access**.
+     ![](images/gif14.gif)
+     
 
-3. **Routing and Remote Access Setup Wizard**:
-   - Click **Next** to begin the wizard.
+2. Right-click on your server name and select **Configure and Enable Routing and Remote Access**.
+   
+   ![](images/gif15.gif)
+
+3. Click **Next** to begin the wizard.
 
 4. Select **Network Address Translation (NAT)** and click **Next**.
 
@@ -250,7 +253,7 @@ Remote Access Service (RAS) will allow clients on the internal network to access
    - Click **Next**.
    - Click **Finish**.
   
-     
+     ![](images/gif16.gif)
 
 ### Setting Up DHCP
 
@@ -262,15 +265,11 @@ Setting up DHCP on your Windows Server 2019 will allow computers on the network 
    - Click on the **Start** menu.
    - Select **Server Manager**.
 
-2. **Add Roles and Features**:
-   - In Server Manager, click on **Manage** in the upper-right corner.
-   - Select **Add Roles and Features**.
+2. Select **Add Roles and Features**.
 
-3. **Before You Begin**:
-   - Click **Next** on the "Before You Begin" page.
+3. Click **Next** on the "Before You Begin" page.
 
-4. **Select Installation Type**:
-   - Choose **Role-based or feature-based installation** and click **Next**.
+4. Choose **Role-based or feature-based installation** and click **Next**.
 
 5. **Select Destination Server**:
    - Ensure your server is selected in the server pool and click **Next**.
@@ -279,14 +278,17 @@ Setting up DHCP on your Windows Server 2019 will allow computers on the network 
    - Scroll down and select **DHCP Server**.
    - A dialog box will pop up to add the required features. Click **Add Features**.
    - Click **Next**.
+  
+   - 
+  
 
-7. **Select Features**:
+8. **Select Features**:
    - Click **Next** on the "Select Features" page.
 
-8. **DHCP Server**:
+9. **DHCP Server**:
    - Click **Next** on the DHCP Server page.
 
-9. **Confirm Installation Selections**:
+10. **Confirm Installation Selections**:
    - Click **Install**.
    - The installation will begin. Once complete, click **Complete DHCP configuration**.
 
