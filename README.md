@@ -136,7 +136,6 @@ After the server restarts, it will have the new name you assigned. This will mak
    
      ![](images/gif07.gif)
      
-
 7. Click **Next** on the "Select Features" page.
 8. Click **Next** on the AD DS page.
 
@@ -144,7 +143,6 @@ After the server restarts, it will have the new name you assigned. This will mak
 10. Once complete, click **Close**.
 
     ![](images/gif08.gif)
-
 
 #### Step 2: Promote the Server to a Domain Controller
 
@@ -154,7 +152,6 @@ After the server restarts, it will have the new name you assigned. This will mak
    
      ![](images/gif09.gif)
      
-
 2. **Deployment Configuration**:
    - Select **Add a new forest**.
    - In the **Root domain name** field, enter the name for your new domain (e.g., "mydomain.com").
@@ -162,7 +159,6 @@ After the server restarts, it will have the new name you assigned. This will mak
    
      ![](images/gif10.gif)
      
-
 3. **Domain Controller Options**:
    - Accept the default selections and enter a **Directory Services Restore Mode(DSRM)** password.
    - Click **Next**.
@@ -206,7 +202,6 @@ Remote Access Service (RAS) will allow clients on the internal network to access
    - Click **Next**.
    
      ![](images/gif11.gif)
-
      
 7. Click **Next** on the "Select Features" page.
    
@@ -218,7 +213,6 @@ Remote Access Service (RAS) will allow clients on the internal network to access
     - Click **Next**.
 
       ![](images/gif12.gif)
-
      
 11. Click **Next** on the Web Server (IIS) page.
 
@@ -230,7 +224,6 @@ Remote Access Service (RAS) will allow clients on the internal network to access
 
     ![](images/gif13.gif)
 
-
 #### Step 2: Configure Remote Access with NAT
 
 1. **Open Remote Access Management**:
@@ -239,7 +232,6 @@ Remote Access Service (RAS) will allow clients on the internal network to access
 
      ![](images/gif14.gif)
      
-
 2. Right-click on your server name and select **Configure and Enable Routing and Remote Access**.
    
    ![](images/gif15.gif)
@@ -255,7 +247,7 @@ Remote Access Service (RAS) will allow clients on the internal network to access
   
      ![](images/gif16.gif)
 
-### Setting Up DHCP
+## Step 6: Installing and Configuring DHCP
 
 Setting up DHCP on your Windows Server 2019 will allow computers on the network to automatically obtain IP addresses.
 
@@ -279,29 +271,30 @@ Setting up DHCP on your Windows Server 2019 will allow computers on the network 
    - A dialog box will pop up to add the required features. Click **Add Features**.
    - Click **Next**.
   
-   - 
+     ![](images/gif17.gif)
   
+8. Click **Next** on the "Select Features" page.
 
-8. **Select Features**:
-   - Click **Next** on the "Select Features" page.
+9. Click **Next** on the DHCP Server page.
 
-9. **DHCP Server**:
-   - Click **Next** on the DHCP Server page.
+10. Click **Install**.
 
-10. **Confirm Installation Selections**:
-   - Click **Install**.
-   - The installation will begin. Once complete, click **Complete DHCP configuration**.
+11. Once complete, click **Complete DHCP configuration**.
 
 #### Step 2: Complete DHCP Configuration
-Click on the **notification flag** and then click on **Promote this server to a domain controller**.
 
-1. **Post-Install Configuration**:
-   - In the **DHCP Post-Install Configuration Wizard**, click **Next**.
+1. Click on the **yellow notification flag** and then click on **Complete DHCP configuration**.
 
-2. **Authorize DHCP Server**:
-   - Ensure your administrator credentials are correct and click **Commit**.
-   - Click **Close**
+   ![](images/gif18.gif)
 
+2. Click **Next**.
+
+3. Ensure your administrator credentials are correct and click **Commit**.
+
+   ![](images/gif19.gif)
+
+4. Click **Close**
+   
 #### Step 3: Configure DHCP Scope
 
 1. **Open DHCP Management**:
