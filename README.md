@@ -164,19 +164,20 @@ After the server restarts, it will have the new name you assigned. This will mak
      
 
 3. **Domain Controller Options**:
-   - Enter a **Directory Services Restore Mode(DSRM)** password and click **Next**.
+   - Accept the default selections and enter a **Directory Services Restore Mode(DSRM)** password.
+   - Click **Next**.
 
-5. Click **Next** on the DNS options page. You may see a warning about a delegation for this DNS server; you can ignore this for now.
+4. Click **Next** on the DNS options page. You may see a warning about a delegation for this DNS server; you can ignore this for now.
 
-6. The NetBIOS domain name will be automatically filled based on your domain name. Click **Next**.
+5. The NetBIOS domain name will be automatically filled based on your domain name. Click **Next**.
 
-7. Accept the default paths for the database, log files, and SYSVOL, and click **Next**.
+6. Accept the default paths for the database, log files, and SYSVOL, and click **Next**.
 
-8. Review your selections and click **Next**.
+7. Review your selections and click **Next**.
 
-9. Click **Install** to begin the promotion.
+8. Click **Install** to begin the promotion.
 
-10. The server will install the necessary components and then automatically restart.
+9. The server will install the necessary components and then automatically restart.
 
 Once the server restarts, it will be a domain controller for your new domain.
 
@@ -204,26 +205,20 @@ Remote Access Service (RAS) will allow clients on the internal network to access
    - Scroll down and select **Remote Access**.
    - A dialog box will pop up to add the required features. Click **Add Features**.
    - Click **Next**.
+   
+7. Click **Next** on the "Select Features" page.
 
-7. **Select Features**:
-   - Click **Next** on the "Select Features" page.
-
-8. **Remote Access**:
-   - Click **Next** on the Remote Access page.
+8. Click **Next** on the Remote Access page.
 
 9. **Role Services**:
    - Select **DirectAccess and VPN (RAS)**.
    - Click **Next**.
 
-10. **Web Server (IIS)**:
-    - Click **Next** on the Web Server (IIS) page.
+10. Click **Next** on the Web Server (IIS) page.
 
-11. **Role Services**:
-    - Accept the default selections and click **Next**.
+11. Accept the default selections and click **Next**.
 
-12. **Confirm Installation Selections**:
-    - Click **Install**.
-    - The installation will begin. Once complete, click **Close**.
+12. Click **Install**. The installation will begin. Once complete, click **Close**.
 
 #### Step 2: Configure Remote Access with NAT
 
