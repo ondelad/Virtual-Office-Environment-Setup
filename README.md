@@ -203,22 +203,33 @@ Remote Access Service (RAS) will allow clients on the internal network to access
 
 6. **Select Server Roles**:
    - Scroll down and select **Remote Access**.
-   - A dialog box will pop up to add the required features. Click **Add Features**.
    - Click **Next**.
    
+  ![](images/gif11.gif)
+
+     
 7. Click **Next** on the "Select Features" page.
+   
+9. Click **Next** on the Remote Access page.
 
-8. Click **Next** on the Remote Access page.
-
-9. **Role Services**:
+10. **Role Services**:
    - Select **DirectAccess and VPN (RAS)**.
+   - Click **Add Features**.
    - Click **Next**.
 
-10. Click **Next** on the Web Server (IIS) page.
+  ![](images/gif12.gif)
 
-11. Accept the default selections and click **Next**.
+     
+11. Click **Next** on the Web Server (IIS) page.
 
-12. Click **Install**. The installation will begin. Once complete, click **Close**.
+12. Accept the default selections and click **Next**.
+
+13. Click **Install**.
+
+14. Once complete, click **Close**.
+
+    ![](images/gif13.gif)
+
 
 #### Step 2: Configure Remote Access with NAT
 
@@ -232,13 +243,14 @@ Remote Access Service (RAS) will allow clients on the internal network to access
 3. **Routing and Remote Access Setup Wizard**:
    - Click **Next** to begin the wizard.
 
-4. **Configuration**:
-   - Select **Network Address Translation (NAT)** and click **Next**.
+4. Select **Network Address Translation (NAT)** and click **Next**.
 
 5. **Public Interface**:
    - Select the network interface that connects to the internet (INTERNET). This interface will be used for public (internet) access.
    - Click **Next**.
    - Click **Finish**.
+  
+     
 
 ### Setting Up DHCP
 
