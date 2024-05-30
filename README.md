@@ -340,11 +340,11 @@ Setting up DHCP on your Windows Server 2019 will allow computers on the network 
    - Parent domain: This field will be automatically
    - Click **Next**
 
-11. Click **Next**.
+10. Click **Next**.
 
-12. Select **Yes, I want to activate this scope now** and click **Next**.
+11. Select **Yes, I want to activate this scope now** and click **Next**.
 
-13. Click **Finish** to complete the wizard.
+12. Click **Finish** to complete the wizard.
 
 Your DHCP server is now configured and active. Clients on your network should automatically receive IP addresses within the specified range.
 
