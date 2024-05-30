@@ -349,19 +349,23 @@ Setting up DHCP on your Windows Server 2019 will allow computers on the network 
 
 Your DHCP server is now configured and active. Clients on your network should automatically receive IP addresses within the specified range.
 
-### Creating an Administrative Account and Making it a Member of Domain Admins
+## Creating an Administrative Account and Making it a Member of Domain Admins
 
-To manage your network effectively, you'll need a dedicated administrative account that has elevated permissions. Here’s how to create this account and make it a member of the Domain Admins group:
+To manage your network effectively, you'll need a dedicated administrative account that has elevated permissions.
 
 #### Step 1: Create a New User Account
 
 1. **Open Active Directory Users and Computers**:
    - Click on the **Start** menu.
-   - Select **Administrative Tools** (or **Windows Administrative Tools**), then click **Active Directory Users and Computers**.
+   - Select **Windows Administrative Tools**, then click **Active Directory Users and Computers**.
 
-2. **Navigate to the Users Container**:
-   - In the Active Directory Users and Computers console, expand your domain (e.g., example.com).
+2. **Create a New User**:
+   - In the Active Directory Users and Computers console, expand your domain.
    - Click on the **Users** container.
+   - Right-click on the **Users** container.
+   - Select **New**, then click **User**.
+  
+   -![](images/gif24.gif)
 
 3. **Create a New User**:
    - Right-click on the **Users** container.
@@ -411,7 +415,7 @@ To manage your network effectively, you'll need a dedicated administrative accou
 
 By following these steps, you will have created a new administrative account and granted it Domain Admins privileges, allowing it to manage the domain effectively.
 
-### Creating User Accounts
+## Creating User Accounts
 
 Let's create four user accounts in Active Directory.
 
