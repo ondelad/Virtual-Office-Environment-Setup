@@ -357,7 +357,7 @@ To manage your network effectively, you'll need a dedicated administrative accou
 
 1. **Open Active Directory Users and Computers**:
    - Click on the **Start** menu.
-   - Select **Windows Administrative Tools**, then click **Active Directory Users and Computers**.
+   - Select **Windows Administrative Tools** and then click **Active Directory Users and Computers**.
 
 2. **Create a New User**:
    - In the Active Directory Users and Computers console, expand your domain.
