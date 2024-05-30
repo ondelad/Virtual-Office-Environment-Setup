@@ -137,9 +137,11 @@ After the server restarts, it will have the new name you assigned. This will mak
      ![](images/gif07.gif)
      
 7. Click **Next** on the "Select Features" page.
+
 8. Click **Next** on the AD DS page.
 
 9. Click **Install**.
+    
 10. Once complete, click **Close**.
 
     ![](images/gif08.gif)
