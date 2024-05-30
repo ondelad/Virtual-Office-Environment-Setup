@@ -300,13 +300,16 @@ Setting up DHCP on your Windows Server 2019 will allow computers on the network 
 1. **Open DHCP Management**:
    - In Server Manager, click **Tools**.
    - Select **DHCP**.
+  
+     ![](images/gif20.gif) 
 
 2. **Create a New Scope**:
    - In the DHCP console, expand your server name.
    - Right-click on **IPv4** and select **New Scope**.
+  
+     ![](images/gif21.gif)
 
-3. **New Scope Wizard**:
-   - Click **Next** to start the wizard.
+3. Click **Next** to start the wizard.
 
 4. **Scope Name**:
    - Enter a name and description for the scope (e.g., "Internal Network Scope") and click **Next**.
@@ -315,19 +318,22 @@ Setting up DHCP on your Windows Server 2019 will allow computers on the network 
    - Enter the IP address range that clients will use. For example:
      - Start IP address: 192.168.0.10
      - End IP address: 192.168.0.100
+   - Length: 24 
    - Enter the **Subnet mask** (e.g., 255.255.255.0) and click **Next**.
+  
+   ![](images/gif22.gif)
 
 6. **Add Exclusions and Delay**:
    - If you have any IP addresses within the range that you want to exclude (e.g., static IPs for servers), add them here. Otherwise, click **Next**.
 
-7. **Lease Duration**:
-   - Specify the lease duration for IP addresses (default is 8 days) and click **Next**.
+7. Accept the default lease duration and click **Next**.
 
-8. **Configure DHCP Options**:
-   - Select **Yes, I want to configure these options now** and click **Next**.
+8. Select **Yes, I want to configure these options now** and click **Next**.
 
 9. **Router (Default Gateway)**:
    - Enter the IP address of the router or gateway for your network (e.g., 192.168.0.1) and click **Add**, then **Next**.
+  
+   ![](images/gif23.gif)
 
 10. **Domain Name and DNS Servers**:
     - Enter your domain name (e.g., example.com).
