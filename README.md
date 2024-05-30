@@ -321,29 +321,24 @@ Setting up DHCP on your Windows Server 2019 will allow computers on the network 
    - Length: 24 
    - Enter the **Subnet mask** (e.g., 255.255.255.0) and click **Next**.
   
-   ![](images/gif22.gif)
+     ![](images/gif22.gif)
 
-6. **Add Exclusions and Delay**:
-   - If you have any IP addresses within the range that you want to exclude (e.g., static IPs for servers), add them here. Otherwise, click **Next**.
+6. Accept the default lease duration and click **Next**.
 
-7. Accept the default lease duration and click **Next**.
+7. Select **Yes, I want to configure these options now** and click **Next**.
 
-8. Select **Yes, I want to configure these options now** and click **Next**.
-
-9. **Router (Default Gateway)**:
+8. **Router (Default Gateway)**:
    - Enter the IP address of the router or gateway for your network (e.g., 192.168.0.1) and click **Add**, then **Next**.
   
-   ![](images/gif23.gif)
+     ![](images/gif23.gif)
 
-10. **Domain Name and DNS Servers**:
-    - Enter your domain name (e.g., example.com).
-    - Enter the IP address of your DNS server (usually the same as your domain controller) and click **Add**, then **Next**.
+9. **Domain Name and DNS Server**:
+   - Parent domain: This field will be automatically
+   - Click **Next**
 
-11. **WINS Servers**:
-    - If you use WINS, enter the IP address of your WINS server. Otherwise, click **Next**.
+11. Click **Next**.
 
-12. **Activate Scope**:
-    - Select **Yes, I want to activate this scope now** and click **Next**.
+12. Select **Yes, I want to activate this scope now** and click **Next**.
 
 13. Click **Finish** to complete the wizard.
 
@@ -365,53 +360,46 @@ To manage your network effectively, you'll need a dedicated administrative accou
    - Right-click on the **Users** container.
    - Select **New**, then click **User**.
   
-   -![](images/gif24.gif)
+     ![](images/gif24.gif)
 
-3. **Create a New User**:
-   - Right-click on the **Users** container.
-   - Select **New**, then click **User**.
-
-4. **New Object - User Wizard**:
-   - **First Name**: Enter the user's first name (e.g., Admin).
-   - **Last Name**: Enter the user's last name (e.g., Account).
-   - **Full Name**: This field will be automatically populated based on the first and last name.
-   - **User Logon Name**: Enter the logon name (e.g., admin).
+3. **New Object - User Wizard**:
+   - First Name: Enter the user's first name (e.g. George).
+   - Last Name: Enter the user's last name (e.g. Smith).
+   - Full Name: This field will be automatically populated based on the first and last name.
+   - User Logon Name: Enter the logon name (e.g. georges).
    - Click **Next**.
 
-5. **Password Setup**:
+4. **Password Setup**:
    - Enter a password for the new account.
    - Confirm the password.
-   - Select the appropriate password options (e.g., **User must change password at next logon**, **User cannot change password**, **Password never expires**).
+   - Select **Password never expires**.
    - Click **Next**.
 
-6. Review the information and click **Finish** to create the new user account.
+5. Review the information and click **Finish** to create the new user account.
 
 #### Step 2: Add the New User to the Domain Admins Group
 
 1. **Open the Properties of the New User**:
-   - In the Active Directory Users and Computers console, locate the new user account you created (e.g., Admin Account).
+   - In the Active Directory Users and Computers console, locate the new user account you created.
    - Right-click on the user account and select **Properties**.
+  
+     ![](images/gif25.gif)
 
-2. **Navigate to the Member Of Tab**:
+2. **Add to Domain Admins Group**:
    - In the user properties window, click on the **Member Of** tab.
-
-3. **Add to Domain Admins Group**:
    - Click the **Add** button.
    - In the **Select Groups** dialog box, type **Domain Admins** and click **Check Names**.
    - If the group name resolves correctly, click **OK**.
+  
+     ![](images/gif26.gif)
 
-4. **Confirm Membership**:
-   - The Domain Admins group should now be listed in the **Member Of** tab.
-   - Click **OK** to close the properties window.
+4. Click **Apply** and then click **OK** to close the properties window.
 
 #### Step 3: Verify the Administrative Privileges
 
-1. **Log Off and Log On**:
-   - Log off from the current session.
-   - Log on with the new administrative account (e.g., admin@example.com).
+1. Log off from the current session. Log on with the new administrative account. 
 
-2. **Verify Administrative Access**:
-   - Ensure the new account has the appropriate administrative rights by performing tasks that require elevated privileges (e.g., opening Server Manager, accessing Active Directory Users and Computers).
+   ![](images/gif27.gif)
 
 By following these steps, you will have created a new administrative account and granted it Domain Admins privileges, allowing it to manage the domain effectively.
 
@@ -423,7 +411,7 @@ Let's create four user accounts in Active Directory.
 
 1. **Open Active Directory Users and Computers**:
    - Click on the **Start** menu.
-   - Select **Administrative Tools** (or **Windows Administrative Tools**), then click **Active Directory Users and Computers**.
+   - Select **Windows Administrative Tools** and then click **Active Directory Users and Computers**.
 
 2. **Navigate to the Users Container**:
    - In the Active Directory Users and Computers console, expand your domain (e.g., example.com).
