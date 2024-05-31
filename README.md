@@ -1,6 +1,6 @@
 # Building a Virtual Mini Corporate Environment
 
-This tutorial will guide you through the process of setting up a virtual corporate environment using Windows Server 2019. You'll learn how to install Windows Server 2019, configure Active Directory, DHCP, and DNS Server roles, create an administrative account, and add 50 users to Active Directory simultaneously. Let's get started!
+This tutorial will guide you through the process of setting up a virtual corporate environment using Windows Server 2019. You'll learn how to install Windows Server 2019, configure Active Directory, DHCP, and DNS Server roles, create an administrative account, and add 3 users to Active Directory. Let's get started!
 
 ## Prerequisites
 Before we start, ensure you have the following:
@@ -21,27 +21,87 @@ Before we start, ensure you have the following:
 
 Next, we'll start with installing the virtualization software and setting up the virtual machine.
 
-## Step 2: Installing Windows Server 2019
+### Setting Up a Hyper-V Virtual Machine with Two NICs
+
+To set up a Hyper-V virtual machine with two network interface cards (NICs), follow these steps:
+
+#### Step 1: Open Hyper-V Manager
+
+1. **Open Hyper-V Manager**:
+   - Click on the **Start** menu.
+   - Search for **Hyper-V Manager** and open it.
+
+#### Step 2: Create Virtual Switches
+
+1. **Create a Virtual Switch for External Network**:
+   - In Hyper-V Manager, click on **Virtual Switch Manager** in the right-hand Actions pane.
+   - Select **New virtual network switch** and choose **External**.
+   - Click **Create Virtual Switch**.
+   - Name the switch (e.g., ExternalSwitch).
+   - Select the physical network adapter connected to the internet.
+   - Click **OK**.
+
+2. **Create a Virtual Switch for Internal Network**:
+   - In Hyper-V Manager, click on **Virtual Switch Manager** again.
+   - Select **New virtual network switch** and choose **Internal**.
+   - Click **Create Virtual Switch**.
+   - Name the switch (e.g., InternalSwitch).
+   - Click **OK**.
+
+#### Step 3: Create the Virtual Machine
 
 1. **Create a New Virtual Machine**:
-   - Open your virtualization software (e.g., VMware Workstation or VirtualBox).
-   - Click on "Create a New Virtual Machine" or a similar option.
-   - Choose the option to install the operating system later if prompted.
+   - In Hyper-V Manager, click on **New** in the right-hand Actions pane.
+   - Select **Virtual Machine**.
 
-2. **Configure the Virtual Machine**:
-   - **Name**: Give your virtual machine a name (e.g., "Windows Server 2019").
-   - **Location**: Choose a location to store the virtual machine files.
-   - **Type**: Select "Microsoft Windows".
-   - **Version**: Choose "Windows Server 2019".
+2. **New Virtual Machine Wizard**:
+   - **Specify Name and Location**:
+     - Name the VM (e.g., Windows10Client).
+     - Click **Next**.
+   - **Specify Generation**:
+     - Choose **Generation 1** or **Generation 2** based on your requirements (Generation 2 if using UEFI firmware).
+     - Click **Next**.
+   - **Assign Memory**:
+     - Assign at least 2 GB of memory (2048 MB) or more, depending on your system resources.
+     - Click **Next**.
+   - **Configure Networking**:
+     - Select **Not Connected** for now.
+     - Click **Next**.
+   - **Connect Virtual Hard Disk**:
+     - Create a new virtual hard disk with at least 60 GB of space.
+     - Click **Next**.
+   - **Installation Options**:
+     - Select **Install an operating system from a bootable image file**.
+     - Browse and select the Windows 10 ISO file.
+     - Click **Next**.
 
-3. **Allocate Resources**:
-   - **Memory (RAM)**: Allocate at least 2 GB of RAM.
-   - **Processor**: Assign at least 2 virtual processors.
-   - **Hard Disk**: Create a new virtual hard disk with at least 32 GB of storage.
+3. **Finish**:
+   - Review the configuration and click **Finish** to create the virtual machine.
 
-4. **Attach the Windows Server 2019 ISO**:
-   - In the virtual machine settings, find the "CD/DVD" drive option.
-   - Attach the Windows Server 2019 ISO file you downloaded earlier.
+#### Step 4: Add Network Adapters to the Virtual Machine
+
+1. **Open VM Settings**:
+   - In Hyper-V Manager, select the newly created VM (e.g., Windows10Client).
+   - Right-click on the VM and select **Settings**.
+
+2. **Add Network Adapters**:
+   - In the **Settings** window, select **Add Hardware**.
+   - Select **Network Adapter** and click **Add**.
+   - For the first network adapter, connect it to the **ExternalSwitch**.
+   - For the second network adapter, add another **Network Adapter** and connect it to the **InternalSwitch**.
+
+3. **Configure Network Adapters**:
+   - Ensure both network adapters are correctly assigned to the respective switches.
+   - Click **Apply** and **OK**.
+
+#### Step 5: Start the Virtual Machine and Install Windows
+
+1. **Start the Virtual Machine**:
+   - In Hyper-V Manager, select the VM.
+   - Click **Start** in the right-hand Actions pane.
+   - Click **Connect** to open the VM console.
+
+## Step 2: Installing Windows Server 2019
 
 5. **Start the Virtual Machine**:
    - Power on the virtual machine.
