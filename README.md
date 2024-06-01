@@ -155,7 +155,6 @@ Once you're logged in, the basic installation of Windows Server 2019 is complete
       
      ![](images/gif06.gif)
        
-
 4. Click **OK**.
 
 Now that the NICs are configured, the server is set up to connect to the internet and to serve client machines on a private network.
@@ -459,9 +458,7 @@ To manage your network effectively, you'll need a dedicated administrative accou
 
 4. Click **Apply** and then click **OK** to close the properties window.
 
-#### Step 3: Verify the Administrative Privileges
-
-1. Log off from the current session. Log on with the new administrative account. 
+5. Log off from the current session. Log on with the new administrative account. 
 
    ![](images/gif27.gif)
 
@@ -502,8 +499,7 @@ For each user, repeat the following steps:
    - Select **User must change password at next logon**.
    - Click **Next**.
 
-4. **Finish**:
-   - Review the information and click **Finish** to create the new user account.
+4. Click **Finish** to create the new user account.
 
 Continue the process until all four users have been created.
 
