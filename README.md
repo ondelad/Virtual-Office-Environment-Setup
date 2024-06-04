@@ -505,4 +505,102 @@ Continue the process until all four users have been created.
 
 By following these steps, you will have created four normal user accounts in Active Directory. These users can now log in to the domain with their respective credentials.
 
+## Creating a Windows 10 Client Machine
+
+To create a Windows 10 client machine and join it to the domain, follow these steps:
+
+#### Step 1: Create a New Virtual Machine for Windows 10
+
+1. **Open Hyper-V Manager**:
+   - Click on the **Start** menu.
+   - Search for **Hyper-V Manager** and open it.
+
+2. **Create a New Virtual Machine**:
+   - In Hyper-V Manager, click **New** in the right-hand Actions pane.
+   - Select **Virtual Machine**.
+
+3. **New Virtual Machine Wizard**:
+   - **Specify Name and Location**:
+     - Name the VM (e.g., Windows10Client).
+     - Click **Next**.
+      
+   - **Specify Generation**:
+     - Choose **Generation 1** or **Generation 2** based on your requirements (Generation 2 if using UEFI firmware).
+     - Click **Next**.
+       
+   - **Assign Memory**:
+     - Assign at least 2 GB of memory (2048 MB) or more, depending on your system resources.
+     - Click **Next**.
+       
+   - **Configure Networking**:
+     - Select the internal network you created earlier for the internal network adapter.
+     - Click **Next**.
+       
+   - **Connect Virtual Hard Disk**:
+     - Create a new virtual hard disk with at least 60 GB of space.
+     - Click **Next**.
+       
+   - **Installation Options**:
+     - Select **Install an operating system from a bootable image file**.
+     - Browse and select the Windows 10 ISO file.
+     - Click **Next**.
+
+4. **Finish**:
+   - Review the configuration and click **Finish** to create the virtual machine.
+
+#### Step 2: Install Windows 10 on the Virtual Machine
+
+1. **Start the Virtual Machine**:
+   - In Hyper-V Manager, select the newly created Windows 10 VM.
+   - Click **Start** in the right-hand Actions pane.
+   - Click **Connect** to open the VM console.
+
+2. **Install Windows 10**:
+   - Follow the on-screen prompts to install Windows 10.
+   - Select the appropriate language, time, and keyboard settings.
+   - Click **Next** and then **Install Now**.
+   - Enter the Windows 10 product key if required.
+   - Accept the license terms and click **Next**.
+   - Choose **Custom: Install Windows only (advanced)**.
+   - Select the virtual hard disk and click **Next**.
+   - The installation process will begin and the VM will restart several times.
+
+3. **Complete Setup**:
+   - Follow the on-screen prompts to complete the Windows 10 setup.
+   - Create a local user account temporarily.
+
+## Step 3: Join the Windows 10 Client to the Domain
+
+1. **Log in to the Windows 10 Client**:
+   - Log in with the local user account you created during setup.
+
+2. **Configure Network Settings**:
+   - Ensure the client machine is connected to the internal network.
+   - Open **Settings** > **Network & Internet** > **Status**.
+   - Click on **Change adapter options**.
+   - Right-click on the network adapter connected to the internal network and select **Properties**.
+   - Ensure the network is set to **Private**.
+
+3. **Join the Domain**:
+   - Open **Settings** > **System** > **About**.
+   - Click on **Join a domain**.
+   - Enter the domain name (e.g., example.com) and click **Next**.
+   - Enter the credentials of a domain user with permission to join computers to the domain (e.g., the admin account created earlier).
+  
+   - 
+
+   - Follow the prompts to join the domain.
+
+5. **Restart the Computer**:
+   - After successfully joining the domain, restart the computer.
+
+6. **Log in with Domain Credentials**:
+   - On the login screen, click **Other user**.
+   - Enter the domain credentials (e.g., johndoe@example.com) for one of the users created earlier.
+   - Log in to verify that the user can access the domain.
+
+With these steps, you have created a Windows 10 client machine and joined it to the domain. The client machine can now be used by domain users.
+
+Let me know when you're ready to proceed to the next step!
+
 
