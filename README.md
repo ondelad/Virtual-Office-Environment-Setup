@@ -426,10 +426,10 @@ To manage your network effectively, you'll need a dedicated administrative accou
      ![](images/gif24.gif)
 
 3. **New Object - User Wizard**:
-   - First Name: Enter the user's first name (e.g. George).
-   - Last Name: Enter the user's last name (e.g. Smith).
+   - First Name: Enter the user's first name (e.g. Ondela).
+   - Last Name: Enter the user's last name (e.g. Dlokovu).
    - Full Name: This field will be automatically populated based on the first and last name.
-   - User Logon Name: Enter the logon name (e.g. georges).
+   - User Logon Name: Enter the logon name (e.g. ondelad).
    - Click **Next**.
 
 4. **Password Setup**:
@@ -475,7 +475,7 @@ Let's create four user accounts in Active Directory.
    - Select **Windows Administrative Tools** and then click **Active Directory Users and Computers**.
 
 2. **Navigate to the Users Container**:
-   - In the Active Directory Users and Computers console, expand your domain (e.g., example.com).
+   - In the Active Directory Users and Computers console, expand your domain.
    - Click on the **Users** container.
 
 #### Step 2: Create a New User Account
@@ -487,10 +487,10 @@ For each user, repeat the following steps:
    - Select **New**, then click **User**.
 
 2. **New Object - User Wizard**:
-   - **First Name**: Enter the user's first name (e.g., John).
-   - **Last Name**: Enter the user's last name (e.g., Doe).
+   - **First Name**: Enter the user's first name (e.g. Peter).
+   - **Last Name**: Enter the user's last name (e.g. Parker).
    - **Full Name**: This field will be automatically populated based on the first and last name.
-   - **User Logon Name**: Enter the logon name (e.g., johndoe).
+   - **User Logon Name**: Enter the logon name (e.g. peterp).
    - Click **Next**.
 
 3. **Password Setup**:
