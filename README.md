@@ -545,8 +545,7 @@ To create a Windows 10 client machine and join it to the domain, follow these st
      - Browse and select the Windows 10 ISO file.
      - Click **Next**.
 
-4. **Finish**:
-   - Review the configuration and click **Finish** to create the virtual machine.
+4. Review the configuration and click **Finish** to create the virtual machine.
 
 #### Step 2: Install Windows 10 on the Virtual Machine
 
@@ -584,7 +583,7 @@ To create a Windows 10 client machine and join it to the domain, follow these st
 3. **Join the Domain**:
    - Open **Settings** > **System** > **About**.
    - Click on **Join a domain**.
-   - Enter the domain name (e.g., example.com) and click **Next**.
+   - Enter the domain name and click **Next**.
    - Enter the credentials of a domain user with permission to join computers to the domain (e.g., the admin account created earlier).
   
    - 
@@ -597,6 +596,9 @@ To create a Windows 10 client machine and join it to the domain, follow these st
 6. **Log in with Domain Credentials**:
    - On the login screen, click **Other user**.
    - Enter the domain credentials (e.g., johndoe@example.com) for one of the users created earlier.
+
+   - 
+
    - Log in to verify that the user can access the domain.
 
 With these steps, you have created a Windows 10 client machine and joined it to the domain. The client machine can now be used by domain users.
