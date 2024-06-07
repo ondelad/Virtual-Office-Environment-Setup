@@ -581,9 +581,13 @@ To create a Windows 10 client machine and join it to the domain, follow these st
    - Ensure the network is set to **Private**.
 
 3. **Join the Domain**:
-   - Open **Settings** > **System** > **About**.
-   - Click on **Join a domain**.
-   - Enter the domain name and click **Next**.
+   - Right-click **Start button**. Select **System**. Click **Rename (advance)**.
+
+   - 
+
+   - Click **Change**.
+   - Rename **Computer name**.
+   - Select **Domain**. Enter the domain name and click **OK**.
    - Enter the credentials of a domain user with permission to join computers to the domain (e.g., the admin account created earlier).
   
    - 
