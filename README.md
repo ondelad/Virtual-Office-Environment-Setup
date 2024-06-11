@@ -21,39 +21,40 @@ Before we start, ensure you have the following:
 
 Next, we'll start with installing the virtualization software and setting up the virtual machine.
 
-### Setting Up a Hyper-V Virtual Machine with Two NICs
+## Step 1: Setting Up a Hyper-V Virtual Machine with Two NICs
 
 To set up a Hyper-V virtual machine with two network interface cards (NICs), follow these steps:
 
-#### Step 1: Open Hyper-V Manager
+## Step 1.1: Create Virtual Switches
 
 1. **Open Hyper-V Manager**:
    - Click on the **Start** menu.
    - Search for **Hyper-V Manager** and open it.
 
-#### Step 2: Create Virtual Switches
-
-1. **Create a Virtual Switch for External Network**:
+2. **Create a Virtual Switch for External Network**:
    - In Hyper-V Manager, click on **Virtual Switch Manager** in the right-hand Actions pane.
    - Select **New virtual network switch** and choose **External**.
    - Click **Create Virtual Switch**.
 
      ![](images/gif1.gif)
 
-   - Name the switch (e.g. INTERNET).
+   - Name the switch "INTERNET".
    - Select the physical network adapter connected to the internet.
-   - Click **Apply**. Click **OK**.
+   - Click **Apply**, then **OK**.
 
-   - 
+     ![](images/gif2.gif)
 
 3. **Create a Virtual Switch for Internal Network**:
    - In Hyper-V Manager, click on **Virtual Switch Manager** again.
    - Select **New virtual network switch** and choose **Internal**.
    - Click **Create Virtual Switch**.
-   - Name the switch (e.g., INTERNAL).
-   - Click **Apply**.Click **OK**.
 
-#### Step 3: Create the Virtual Machine
+     ![](images/gif3.gif)
+
+   - Name the switch "INTERNAL".
+   - Click **Apply**, then **OK**.
+
+## Step 2: Create the Virtual Machine
 
 1. **Create a New Virtual Machine**:
    - In Hyper-V Manager, click on **New** in the right-hand Actions pane.
@@ -61,51 +62,55 @@ To set up a Hyper-V virtual machine with two network interface cards (NICs), fol
 
 2. **New Virtual Machine Wizard**:
    - **Specify Name and Location**:
-     - Name the VM (e.g., Windows10Client).
+     - Name the VM (e.g. DC).
      - Click **Next**.
    - **Specify Generation**:
-     - Choose **Generation 1** or **Generation 2** based on your requirements (Generation 2 if using UEFI firmware).
+     - Choose **Generation 1**.
      - Click **Next**.
    - **Assign Memory**:
      - Assign at least 2 GB of memory (2048 MB) or more, depending on your system resources.
      - Click **Next**.
    - **Configure Networking**:
-     - Select **INTERNET** for now.
+     - Select the newly created external switch(**INTERNET**).
      - Click **Next**.
+
+       ![](images/gif4.gif)
+
    - **Connect Virtual Hard Disk**:
-     - Create a new virtual hard disk with at least 20 GB of space.
+     - Create a new virtual hard disk with at least 15 GB of space.
      - Click **Next**.
    - **Installation Options**:
      - Select **Install an operating system from a bootable image file**.
      - Browse and select the Windows 10 ISO file.
      - Click **Next**.
 
-3. Review the configuration and click **Finish** to create the virtual machine.
+       ![](images/gif5.gif)
 
-#### Step 4: Add Network Adapters to the Virtual Machine
+4. Review the configuration and click **Finish** to create the virtual machine.
 
-1. **Open VM Settings**:
-   - In Hyper-V Manager, select the newly created VM (e.g., Windows10Client).
+## Step 3: Add Network Adapters to the Virtual Machine
+
+1. **Add Network Adapters**:
+   - In Hyper-V Manager, select the newly created virtual machine.
    - Right-click on the VM and select **Settings**.
-
-2. **Add Network Adapters**:
    - In the **Settings** window, select **Add Hardware**.
    - Select **Network Adapter** and click **Add**.
-   - Connect it to the **INTERNAL**.
-   - For the second network adapter, add another **Network Adapter** and connect it to the **InternalSwitch**.
 
-3. **Configure Network Adapters**:
-   - Ensure both network adapters are correctly assigned to the respective switches.
+     ![](images/gif6.gif)
+
+   - Connect it to the **INTERNAL**.
    - Click **Apply** and **OK**.
 
-#### Step 5: Start the Virtual Machine and Install Windows
+     ![](images/gif7.gif)
+
+#### Start the Virtual Machine and Install Windows
 
 1. **Start the Virtual Machine**:
    - In Hyper-V Manager, select the VM.
    - Click **Start** in the right-hand Actions pane.
    - Click **Connect** to open the VM console.
 
-## Step 2: Installing Windows Server 2019
+## Step 4: Installing Windows Server 2019
 
 5. **Start the Virtual Machine**:
    - Power on the virtual machine.
@@ -135,7 +140,7 @@ To set up a Hyper-V virtual machine with two network interface cards (NICs), fol
         
 Once you're logged in, the basic installation of Windows Server 2019 is complete.
 
-## Step 3: Configure NICs in Windows Server 2019
+## Step 5: Configure NICs in Windows Server 2019
 
 1. **Open Network Connections**:
    - Open the **Control Panel**.
@@ -163,7 +168,7 @@ Once you're logged in, the basic installation of Windows Server 2019 is complete
 
 Now that the NICs are configured, the server is set up to connect to the internet and to serve client machines on a private network.
 
-## Step 3: Rename the Windows Server Machine
+### Rename the Windows Server Machine
 Renaming your server will help in identifying it easily on the network.
 
 3. **Change Computer Name**:
@@ -178,7 +183,7 @@ Renaming your server will help in identifying it easily on the network.
 
 After the server restarts, it will have the new name you assigned. This will make it easier to manage and identify on your network.
 
-## Step 4: Installing Active Directory and Creating a Domain
+## Step 6: Installing Active Directory and Creating a Domain
 
 1. **Open Server Manager**:
    - Click on the **Start** menu.
@@ -211,7 +216,7 @@ After the server restarts, it will have the new name you assigned. This will mak
 
     ![](images/gif08.gif)
 
-#### Step 2: Promote the Server to a Domain Controller
+### Step 6.2: Promote the Server to a Domain Controller
 
 1. **Post-Deployment Configuration**:
    - In Server Manager, you will see a yellow notification flag indicating a post-deployment configuration pending.
@@ -244,11 +249,11 @@ After the server restarts, it will have the new name you assigned. This will mak
 
 Once the server restarts, it will be a domain controller for your new domain.
 
-## Step 5: Installing and Configuring Remote Access Service (RAS)
+## Step 7: Installing and Configuring Remote Access Service (RAS)
 
 Remote Access Service (RAS) will allow clients on the internal network to access the internet through the domain controller.
 
-#### Step 1: Install Remote Access Role
+### Install Remote Access Role
 
 1. **Open Server Manager**:
    - Click on the **Start** menu.
@@ -291,7 +296,7 @@ Remote Access Service (RAS) will allow clients on the internal network to access
 
     ![](images/gif13.gif)
 
-#### Step 2: Configure Remote Access with NAT
+### Step 7.2: Configure Remote Access with NAT
 
 1. **Open Remote Access Management**:
    - In Server Manager, click **Tools**.
@@ -314,11 +319,11 @@ Remote Access Service (RAS) will allow clients on the internal network to access
   
      ![](images/gif16.gif)
 
-## Step 6: Installing and Configuring DHCP
+## Step 8: Installing and Configuring DHCP
 
 Setting up DHCP on your Windows Server 2019 will allow computers on the network to automatically obtain IP addresses.
 
-#### Step 1: Install the DHCP Server Role
+### Install the DHCP Server Role
 
 1. **Open Server Manager**:
    - Click on the **Start** menu.
@@ -348,7 +353,7 @@ Setting up DHCP on your Windows Server 2019 will allow computers on the network 
 
 11. Once complete, click **Complete DHCP configuration**.
 
-#### Step 2: Complete DHCP Configuration
+## Step 12: Complete DHCP Configuration
 
 1. Click on the **yellow notification flag** and then click on **Complete DHCP configuration**.
 
@@ -362,7 +367,7 @@ Setting up DHCP on your Windows Server 2019 will allow computers on the network 
 
 4. Click **Close**
    
-#### Step 3: Configure DHCP Scope
+### Step 8.2: Configure DHCP Scope
 
 1. **Open DHCP Management**:
    - In Server Manager, click **Tools**.
@@ -411,11 +416,11 @@ Setting up DHCP on your Windows Server 2019 will allow computers on the network 
 
 Your DHCP server is now configured and active. Clients on your network should automatically receive IP addresses within the specified range.
 
-## Creating an Administrative Account and Making it a Member of Domain Admins
+## Step 9: Creating an Administrative Account and Making it a Member of Domain Admins
 
 To manage your network effectively, you'll need a dedicated administrative account that has elevated permissions.
 
-#### Step 1: Create a New User Account
+### Create a New User Account
 
 1. **Open Active Directory Users and Computers**:
    - Click on the **Start** menu.
@@ -444,7 +449,7 @@ To manage your network effectively, you'll need a dedicated administrative accou
 
 5. Review the information and click **Finish** to create the new user account.
 
-#### Step 2: Add the New User to the Domain Admins Group
+### Step 9.2: Add the New User to the Domain Admins Group
 
 1. **Open the Properties of the New User**:
    - In the Active Directory Users and Computers console, locate the new user account you created.
@@ -509,7 +514,7 @@ Continue the process until all four users have been created.
 
 By following these steps, you will have created four normal user accounts in Active Directory. These users can now log in to the domain with their respective credentials.
 
-## Creating a Windows 10 Client Machine
+## Step 10: Creating a Windows 10 Client Machine
 
 To create a Windows 10 client machine and join it to the domain, follow these steps:
 
@@ -529,7 +534,7 @@ To create a Windows 10 client machine and join it to the domain, follow these st
      - Click **Next**.
       
    - **Specify Generation**:
-     - Choose **Generation 1** or **Generation 2** based on your requirements (Generation 2 if using UEFI firmware).
+     - Choose **Generation 1**.
      - Click **Next**.
        
    - **Assign Memory**:
@@ -551,7 +556,7 @@ To create a Windows 10 client machine and join it to the domain, follow these st
 
 4. Review the configuration and click **Finish** to create the virtual machine.
 
-#### Step 2: Install Windows 10 on the Virtual Machine
+### Step 10.2: Install Windows 10 on the Virtual Machine
 
 1. **Start the Virtual Machine**:
    - In Hyper-V Manager, select the newly created Windows 10 VM.
