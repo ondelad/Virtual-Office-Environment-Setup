@@ -37,16 +37,21 @@ To set up a Hyper-V virtual machine with two network interface cards (NICs), fol
    - In Hyper-V Manager, click on **Virtual Switch Manager** in the right-hand Actions pane.
    - Select **New virtual network switch** and choose **External**.
    - Click **Create Virtual Switch**.
-   - Name the switch (e.g., ExternalSwitch).
-   - Select the physical network adapter connected to the internet.
-   - Click **OK**.
 
-2. **Create a Virtual Switch for Internal Network**:
+     ![](images/gif1.gif)
+
+   - Name the switch (e.g. INTERNET).
+   - Select the physical network adapter connected to the internet.
+   - Click **Apply**. Click **OK**.
+
+   - 
+
+3. **Create a Virtual Switch for Internal Network**:
    - In Hyper-V Manager, click on **Virtual Switch Manager** again.
    - Select **New virtual network switch** and choose **Internal**.
    - Click **Create Virtual Switch**.
-   - Name the switch (e.g., InternalSwitch).
-   - Click **OK**.
+   - Name the switch (e.g., INTERNAL).
+   - Click **Apply**.Click **OK**.
 
 #### Step 3: Create the Virtual Machine
 
@@ -65,18 +70,17 @@ To set up a Hyper-V virtual machine with two network interface cards (NICs), fol
      - Assign at least 2 GB of memory (2048 MB) or more, depending on your system resources.
      - Click **Next**.
    - **Configure Networking**:
-     - Select **Not Connected** for now.
+     - Select **INTERNET** for now.
      - Click **Next**.
    - **Connect Virtual Hard Disk**:
-     - Create a new virtual hard disk with at least 60 GB of space.
+     - Create a new virtual hard disk with at least 20 GB of space.
      - Click **Next**.
    - **Installation Options**:
      - Select **Install an operating system from a bootable image file**.
      - Browse and select the Windows 10 ISO file.
      - Click **Next**.
 
-3. **Finish**:
-   - Review the configuration and click **Finish** to create the virtual machine.
+3. Review the configuration and click **Finish** to create the virtual machine.
 
 #### Step 4: Add Network Adapters to the Virtual Machine
 
@@ -87,7 +91,7 @@ To set up a Hyper-V virtual machine with two network interface cards (NICs), fol
 2. **Add Network Adapters**:
    - In the **Settings** window, select **Add Hardware**.
    - Select **Network Adapter** and click **Add**.
-   - For the first network adapter, connect it to the **ExternalSwitch**.
+   - Connect it to the **INTERNAL**.
    - For the second network adapter, add another **Network Adapter** and connect it to the **InternalSwitch**.
 
 3. **Configure Network Adapters**:
