@@ -60,13 +60,13 @@ To set up a Hyper-V virtual machine with two network interface cards (NICs), fol
 
 2. **New Virtual Machine Wizard**:
    - **Specify Name and Location**:
-     - Name the VM (e.g. DC).
+     - Name the VM "DC".
      - Click **Next**.
    - **Specify Generation**:
      - Choose **Generation 1**.
      - Click **Next**.
    - **Assign Memory**:
-     - Assign at least 2 GB of memory (2048 MB) or more, depending on your system resources.
+     - Assign at least 2 GB of memory (2048 MB) or more.
      - Click **Next**.
    - **Configure Networking**:
      - Select the newly created external switch(**INTERNET**).
@@ -79,7 +79,7 @@ To set up a Hyper-V virtual machine with two network interface cards (NICs), fol
      - Click **Next**.
    - **Installation Options**:
      - Select **Install an operating system from a bootable image file**.
-     - Browse and select the Windows 10 ISO file.
+     - Browse and select the Windows Server ISO file.
      - Click **Next**.
 
        ![](images/gif5.gif)
@@ -97,26 +97,22 @@ To set up a Hyper-V virtual machine with two network interface cards (NICs), fol
      ![](images/gif6.gif)
 
    - Connect it to the **INTERNAL**.
-   - Click **Apply** and **OK**.
+   - Click **Apply**, then **OK**.
 
      ![](images/gif7.gif)
 
-#### Start the Virtual Machine and Install Windows
-
-1. **Start the Virtual Machine**:
-   - In Hyper-V Manager, select the VM.
-   - Click **Start** in the right-hand Actions pane.
-   - Click **Connect** to open the VM console.
 
 ## Step 4: Installing Windows Server 2019
 
-5. **Start the Virtual Machine**:
-   - Power on the virtual machine.
+1. **Start the Virtual Machine**:
+   - In Hyper-V Manager, select the VM.
+   - Right-click on the VM and select **Connect**.
+   - Select **Start**.
    - The virtual machine will boot from the attached ISO file.
 
-6. **Windows Server 2019 Installation**:
+2. **Windows Server 2019 Installation**:
    - **Language, Time, and Keyboard**: Choose your preferences and click "Next".
-   - Click **Install Now**.
+   - Click **Install Now**
     
      ![](images/gif01.gif)
     
@@ -140,14 +136,16 @@ Once you're logged in, the basic installation of Windows Server 2019 is complete
 
 ## Step 5: Configure NICs in Windows Server 2019
 
-1. **Open Network Connections**:
-   - Open the **Control Panel**.
-   - Navigate to **Network and Sharing Center**.
+1. **Open Network Connections**: 
+   - Right-click the network icon.
+   - Click **Open Network and Settings**.
    - Click on **Change adapter settings** on the left side.
 
 2. **Rename NICs for easier identification**:
-   - Right-click **Ethernet** and select **Rename**. Change the name to "INTERNET"
-   - Right-click **Ethernet 2** and select **Rename**. Change the name to "INTERNAL"
+   - Right-click **Ethernet** and select **Rename**.
+   - Change the name to "INTERNET".
+   - Right-click **Ethernet 2** and select **Rename**.
+   - Change the name to "INTERNAL"
     
      ![](images/gif05.gif)
     
