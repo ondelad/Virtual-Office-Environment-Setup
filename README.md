@@ -38,7 +38,7 @@ To set up a Hyper-V virtual machine with two network interface cards (NICs), fol
 
    - Name the switch "INTERNET".
    - Select the physical network adapter connected to the internet.
-   - Click **Apply**,and then **OK**.
+   - Click **Apply**, then click **OK**.
 
      ![](images/gif2.gif)
 
@@ -50,7 +50,7 @@ To set up a Hyper-V virtual machine with two network interface cards (NICs), fol
      ![](images/gif3.gif)
 
    - Name the switch "INTERNAL".
-   - Click **Apply**,and then **OK**.
+   - Click **Apply**, then **OK**.
 
 ## Step 2: Create the Virtual Machine
 
@@ -96,12 +96,12 @@ To set up a Hyper-V virtual machine with two network interface cards (NICs), fol
    - In Hyper-V Manager, select the newly created virtual machine.
    - Right-click on the VM and select **Settings**.
    - In the **Settings** window, select **Add Hardware**.
-   - Select **Network Adapter** and click **Add**.
+   - Select **Network Adapter**, then click **Add**.
 
      ![](images/gif6.gif)
 
    - Connect it to the **INTERNAL**.
-   - Click **Apply**, then **OK**.
+   - Click **Apply**, then click  **OK**.
 
      ![](images/gif7.gif)
 
@@ -174,7 +174,7 @@ Renaming your server will help in identifying it easily on the network.
 1. **Change Computer Name**:
    - Right-click the Start button. Select **System**.
    - Click the **Rename this PC** button. Name the server "DC"
-   - Click **Next** and then click **Restart now**.
+   - Click **Next**, then click **Restart now**.
 
 After the server restarts, it will have the new name you assigned. This will make it easier to manage and identify on your network.
 
