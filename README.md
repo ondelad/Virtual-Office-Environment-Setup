@@ -44,7 +44,7 @@ To set up a Hyper-V virtual machine with two network interface cards (NICs), fol
 
 2. **Create a Virtual Switch for Internal Network**:
    - In Hyper-V Manager, click on **Virtual Switch Manager** again.
-   - Select **New virtual network switch** and choose **Internal**.
+   - Choose **Internal**.
    - Click **Create Virtual Switch**.
 
      ![](images/gif3.gif)
@@ -62,12 +62,15 @@ To set up a Hyper-V virtual machine with two network interface cards (NICs), fol
    - **Specify Name and Location**:
      - Name the VM "DC".
      - Click **Next**.
+      
    - **Specify Generation**:
      - Choose **Generation 1**.
      - Click **Next**.
+      
    - **Assign Memory**:
-     - Assign at least 2 GB of memory (2048 MB) or more.
+     - Assign at least 2 GB of memory (2048 MB) or more, depending on your system resources.
      - Click **Next**.
+       
    - **Configure Networking**:
      - Select the newly created external switch(**INTERNET**).
      - Click **Next**.
@@ -77,6 +80,7 @@ To set up a Hyper-V virtual machine with two network interface cards (NICs), fol
    - **Connect Virtual Hard Disk**:
      - Create a new virtual hard disk with at least 20 GB of space.
      - Click **Next**.
+      
    - **Installation Options**:
      - Select **Install an operating system from a bootable image file**.
      - Browse and select the Windows Server ISO file.
@@ -84,7 +88,7 @@ To set up a Hyper-V virtual machine with two network interface cards (NICs), fol
 
        ![](images/gif5.gif)
 
-4. Review the configuration and then click **Finish**.
+4. Click **Finish**.
 
 ## Step 3: Add Network Adapters to the Virtual Machine
 
@@ -217,7 +221,7 @@ After the server restarts, it will have the new name you assigned. This will mak
      
 2. **Deployment Configuration**:
    - Select **Add a new forest**.
-   - In the **Root domain name** field, enter the name for your new domain (e.g., "mydomain.com").
+   - In the **Root domain name** field, enter the name for your new domain (e.g. mydomain.com).
    - Click **Next**.
    
      ![](images/gif10.gif)
@@ -244,7 +248,7 @@ Once the server restarts, it will be a domain controller for your new domain.
 
 Remote Access Service (RAS) will allow clients on the internal network to access the internet through the domain controller.
 
-### Install Remote Access Role
+### Step 7.1: Install Remote Access Role
 
 1. **Open Server Manager**:
    - Click on the **Start** menu.
@@ -272,8 +276,7 @@ Remote Access Service (RAS) will allow clients on the internal network to access
 
 10. **Role Services**:
     - Select **DirectAccess and VPN (RAS)**.
-    - Click **Add Features**.
-    - Click **Next**.
+    - Click **Add Features**, then click **Next**.
 
       ![](images/gif12.gif)
      
@@ -305,8 +308,7 @@ Remote Access Service (RAS) will allow clients on the internal network to access
 
 5. **Public Interface**:
    - Select the network interface that connects to the internet (INTERNET). This interface will be used for public (internet) access.
-   - Click **Next**.
-   - Click **Finish**.
+   - Click **Next**, then click **Finish**.
   
      ![](images/gif16.gif)
 
@@ -314,7 +316,7 @@ Remote Access Service (RAS) will allow clients on the internal network to access
 
 Setting up DHCP on your Windows Server 2019 will allow computers on the network to automatically obtain IP addresses.
 
-### Install the DHCP Server Role
+### Step 8.1: Install the DHCP Server Role
 
 1. **Open Server Manager**:
    - Click on the **Start** menu.
@@ -342,9 +344,9 @@ Setting up DHCP on your Windows Server 2019 will allow computers on the network 
 
 10. Click **Install**.
 
-11. Once complete, click **Complete DHCP configuration**.
+11. Once complete, click **Close**.
 
-### Complete DHCP Configuration
+### Step 8.2: Complete DHCP Configuration
 
 1. Click on the **yellow notification flag** and then click on **Complete DHCP configuration**.
 
@@ -358,7 +360,7 @@ Setting up DHCP on your Windows Server 2019 will allow computers on the network 
 
 4. Click **Close**
    
-### Step 8.2: Configure DHCP Scope
+### Step 8.3: Configure DHCP Scope
 
 1. **Open DHCP Management**:
    - In Server Manager, click **Tools**.
@@ -391,7 +393,7 @@ Setting up DHCP on your Windows Server 2019 will allow computers on the network 
 7. Select **Yes, I want to configure these options now** and click **Next**.
 
 8. **Router (Default Gateway)**:
-   - Enter the IP address of the router or gateway for your network (e.g., 192.168.0.1) and click **Add**, then **Next**.
+   - Enter the IP address of the router or gateway for your network (192.168.0.1) and click **Add**, then **Next**.
   
      ![](images/gif23.gif)
 
@@ -411,7 +413,7 @@ Your DHCP server is now configured and active. Clients on your network should au
 
 To manage your network effectively, you'll need a dedicated administrative account that has elevated permissions.
 
-### Create a New User Account
+### Step 9.1: Create a New User Account
 
 1. **Open Active Directory Users and Computers**:
    - Click on the **Start** menu.
@@ -438,7 +440,7 @@ To manage your network effectively, you'll need a dedicated administrative accou
    - Select **Password never expires** for the project sake
    - Click **Next**.
 
-5. Review the information and click **Finish** to create the new user account.
+5. Click **Finish** to create the new user account.
 
 ### Step 9.2: Add the New User to the Domain Admins Group
 
@@ -456,7 +458,7 @@ To manage your network effectively, you'll need a dedicated administrative accou
   
      ![](images/gif26.gif)
 
-4. Click **Apply** and then click **OK** to close the properties window.
+4. Click **Apply**, then click **OK**.
 
 5. Log off from the current session. Log on with the new administrative account. 
 
@@ -464,7 +466,7 @@ To manage your network effectively, you'll need a dedicated administrative accou
 
 By following these steps, you will have created a new administrative account and granted it Domain Admins privileges, allowing it to manage the domain effectively.
 
-## Creating User Accounts
+### Creating User Accounts
 
 Let's create four user accounts in Active Directory.
 
@@ -501,7 +503,7 @@ For each user, repeat the following steps:
 
 4. Click **Finish** to create the new user account.
 
-Continue the process until all four users have been created.
+Continue the process until all three users have been created.
 
 By following these steps, you will have created four normal user accounts in Active Directory. These users can now log in to the domain with their respective credentials.
 
@@ -509,7 +511,7 @@ By following these steps, you will have created four normal user accounts in Act
 
 To create a Windows 10 client machine and join it to the domain, follow these steps:
 
-#### Step 1: Create a New Virtual Machine for Windows 10
+### Step 10.1: Create a New Virtual Machine for Windows 10
 
 1. **Open Hyper-V Manager**:
    - Click on the **Start** menu.
@@ -545,16 +547,17 @@ To create a Windows 10 client machine and join it to the domain, follow these st
      - Browse and select the Windows 10 ISO file.
      - Click **Next**.
 
-4. Review the configuration and click **Finish** to create the virtual machine.
+4. Click **Finish** to create the virtual machine.
 
 ### Step 10.2: Install Windows 10 on the Virtual Machine
 
 1. **Start the Virtual Machine**:
-   - In Hyper-V Manager, select the newly created Windows 10 VM.
-   - Click **Start** in the right-hand Actions pane.
-   - Click **Connect** to open the VM console.
+   - In Hyper-V Manager, select the VM.
+   - Right-click on the VM and select **Connect**.
+   - Select **Start**.
+   - The virtual machine will boot from the attached ISO file.
 
-2. **Install Windows 10**:
+2. **Windows 10 Pro Installation**:
    - Follow the on-screen prompts to install Windows 10.
    - Select the appropriate language, time, and keyboard settings.
    - Click **Next** and then **Install Now**.
@@ -568,7 +571,7 @@ To create a Windows 10 client machine and join it to the domain, follow these st
    - Follow the on-screen prompts to complete the Windows 10 setup.
    - Create a local user account temporarily.
 
-## Step 3: Join the Windows 10 Client to the Domain
+## Step 11: Join the Windows 10 Client to the Domain
 
 1. **Log in to the Windows 10 Client**:
    - Log in with the local user account you created during setup.
@@ -586,9 +589,9 @@ To create a Windows 10 client machine and join it to the domain, follow these st
    - 
 
    - Click **Change**.
-   - Rename **Computer name**.
+   - Rename **Computer name** (e.g. BCN01) 
    - Select **Domain**. Enter the domain name and click **OK**.
-   - Enter the credentials of a domain user with permission to join computers to the domain (e.g., the admin account created earlier).
+   - Enter the credentials of a domain user with permission to join computers to the domain (e.g. the admin account created earlier).
   
    - 
 
