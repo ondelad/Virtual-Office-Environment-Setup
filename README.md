@@ -38,7 +38,7 @@ To set up a Hyper-V virtual machine with two network interface cards (NICs), fol
 
    - Name the switch "INTERNET".
    - Select the physical network adapter connected to the internet.
-   - Click **Apply**, then **OK**.
+   - Click **Apply**,and then **OK**.
 
      ![](images/gif2.gif)
 
@@ -50,7 +50,7 @@ To set up a Hyper-V virtual machine with two network interface cards (NICs), fol
      ![](images/gif3.gif)
 
    - Name the switch "INTERNAL".
-   - Click **Apply**, then **OK**.
+   - Click **Apply**,and then **OK**.
 
 ## Step 2: Create the Virtual Machine
 
@@ -75,7 +75,7 @@ To set up a Hyper-V virtual machine with two network interface cards (NICs), fol
        ![](images/gif4.gif)
 
    - **Connect Virtual Hard Disk**:
-     - Create a new virtual hard disk with at least 15 GB of space.
+     - Create a new virtual hard disk with at least 20 GB of space.
      - Click **Next**.
    - **Installation Options**:
      - Select **Install an operating system from a bootable image file**.
@@ -84,7 +84,7 @@ To set up a Hyper-V virtual machine with two network interface cards (NICs), fol
 
        ![](images/gif5.gif)
 
-4. Review the configuration and click **Finish** to create the virtual machine.
+4. Review the configuration and then click **Finish**.
 
 ## Step 3: Add Network Adapters to the Virtual Machine
 
@@ -167,15 +167,10 @@ Now that the NICs are configured, the server is set up to connect to the interne
 ### Rename the Windows Server Machine
 Renaming your server will help in identifying it easily on the network.
 
-3. **Change Computer Name**:
-   - Right-click the Start button. Select System. In the **System Properties** window, click the **Change** button.
-   - In the **Computer Name/Domain Changes** window, enter a new name for your server in the **Computer name** field (e.g. "DC").
-   - Click **OK**.
-
-4. **Restart the Server**:
-   - You will be prompted to restart your server to apply the changes.
-   - Click **OK** on the prompt and then click **Close** on the System Properties window.
-   - Click **Restart Now** to reboot the server.
+1. **Change Computer Name**:
+   - Right-click the Start button. Select **System**.
+   - Click the **Rename this PC** button. Name the server "DC"
+   - Click **Next** and then click **Restart now**.
 
 After the server restarts, it will have the new name you assigned. This will make it easier to manage and identify on your network.
 
@@ -349,7 +344,7 @@ Setting up DHCP on your Windows Server 2019 will allow computers on the network 
 
 11. Once complete, click **Complete DHCP configuration**.
 
-## Step 12: Complete DHCP Configuration
+### Complete DHCP Configuration
 
 1. Click on the **yellow notification flag** and then click on **Complete DHCP configuration**.
 
@@ -440,7 +435,7 @@ To manage your network effectively, you'll need a dedicated administrative accou
 4. **Password Setup**:
    - Enter a password for the new account.
    - Confirm the password.
-   - Select **Password never expires**.
+   - Select **Password never expires** for the project sake
    - Click **Next**.
 
 5. Review the information and click **Finish** to create the new user account.
@@ -599,8 +594,7 @@ To create a Windows 10 client machine and join it to the domain, follow these st
 
    - Follow the prompts to join the domain.
 
-5. **Restart the Computer**:
-   - After successfully joining the domain, restart the computer.
+5. After successfully joining the domain, restart the computer.
 
 6. **Log in with Domain Credentials**:
    - On the login screen, click **Other user**.
