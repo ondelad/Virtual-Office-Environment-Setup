@@ -90,9 +90,9 @@ To set up a Hyper-V virtual machine with two network interface cards (NICs), fol
 
 4. Click **Finish**.
 
-## Step 3: Add Network Adapters to the Virtual Machine
+## Step 3: Add the Internal Network Adapter to the Virtual Machine
 
-1. **Add Network Adapters**:
+1. **Add Network Adapter**:
    - In Hyper-V Manager, select the newly created virtual machine.
    - Right-click on the VM and select **Settings**.
    - In the **Settings** window, select **Add Hardware**.
@@ -138,22 +138,22 @@ To set up a Hyper-V virtual machine with two network interface cards (NICs), fol
         
 Once you're logged in, the basic installation of Windows Server 2019 is complete.
 
-## Step 5: Configure NICs in Windows Server 2019
+## Step 5: Configure NICs in Windows Server
 
-1. **Open Network Connections**: 
-   - Right-click the network icon.
-   - Click **Open Network and Settings**.
-   - Click on **Change adapter settings** on the left side.
+1. **Rename NICs for easier identification**:
+   - Right-click the network icon. Click **Open Network and Settings**.
+   - Click on **Change adapter settings**.
 
-2. **Rename NICs for easier identification**:
+     ![](images/gif8.gif)
+
    - Right-click **Ethernet** and select **Rename**.
    - Change the name to "INTERNET".
    - Right-click **Ethernet 2** and select **Rename**.
    - Change the name to "INTERNAL"
     
-     ![](images/gif05.gif)
+     ![](images/gif9.gif)
     
-3. **Configure Internal Network NIC**:
+2. **Configure Internal Network NIC**:
    - Right-click on "INTERNAL" and select **Properties**.
    - Select **Internet Protocol Version 4 (TCP/IPv4)** and click **Properties**.
    - Assign a static IP address:
@@ -164,7 +164,7 @@ Once you're logged in, the basic installation of Windows Server 2019 is complete
       
      ![](images/gif06.gif)
        
-4. Click **OK**.
+3. Click **OK**.
 
 Now that the NICs are configured, the server is set up to connect to the internet and to serve client machines on a private network.
 
@@ -230,7 +230,7 @@ After the server restarts, it will have the new name you assigned. This will mak
    - Accept the default selections and enter a **Directory Services Restore Mode(DSRM)** password.
    - Click **Next**.
 
-4. Click **Next** on the DNS options page. You may see a warning about a delegation for this DNS server; you can ignore this for now.
+4. Click **Next** on the DNS options page. You may see a warning about a delegation for this DNS server, you can ignore this for now.
 
 5. The NetBIOS domain name will be automatically filled based on your domain name. Click **Next**.
 
