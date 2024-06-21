@@ -199,7 +199,7 @@ After the server restarts, it will have the new name you assigned. This will mak
    - A dialog box will pop up to add the required features. Click **Add Features**.
    - Click **Next**.
    
-     ![](images/gif07.gif)
+     ![](images/gif16-1.gif)
      
 7. Click **Next** on the "Select Features" page.
 
@@ -209,7 +209,7 @@ After the server restarts, it will have the new name you assigned. This will mak
     
 10. Once complete, click **Close**.
 
-    ![](images/gif08.gif)
+    ![](images/gif17-1.gif)
 
 ### Step 6.2: Promote the Server to a Domain Controller
 
@@ -217,7 +217,7 @@ After the server restarts, it will have the new name you assigned. This will mak
    - In Server Manager, you will see a yellow notification flag indicating a post-deployment configuration pending.
    - Click on the **notification flag** and then click on **Promote this server to a domain controller**.
    
-     ![](images/gif09.gif)
+     ![](images/gif18-1.gif)
      
 2. **Deployment Configuration**:
    - Select **Add a new forest**.
@@ -268,7 +268,7 @@ Remote Access Service (RAS) will allow clients on the internal network to access
    - Scroll down and select **Remote Access**.
    - Click **Next**.
    
-     ![](images/gif11.gif)
+     ![](images/gif10-1.gif)
      
 7. Click **Next** on the "Select Features" page.
    
@@ -278,7 +278,7 @@ Remote Access Service (RAS) will allow clients on the internal network to access
     - Select **DirectAccess and VPN (RAS)**.
     - Click **Add Features**, then click **Next**.
 
-      ![](images/gif12.gif)
+      ![](images/gif11-1.gif)
      
 11. Click **Next** on the Web Server (IIS) page.
 
@@ -288,7 +288,7 @@ Remote Access Service (RAS) will allow clients on the internal network to access
 
 14. Once complete, click **Close**.
 
-    ![](images/gif13.gif)
+    ![](images/gif12-1.gif)
 
 ### Step 7.2: Configure Remote Access with NAT
 
@@ -296,11 +296,11 @@ Remote Access Service (RAS) will allow clients on the internal network to access
    - In Server Manager, click **Tools**.
    - Select **Routing and Remote Access**.
 
-     ![](images/gif14.gif)
+     ![](images/gif13-1.gif)
      
 2. Right-click on your server name and select **Configure and Enable Routing and Remote Access**.
    
-   ![](images/gif15.gif)
+   ![](images/gif14-1.gif)
 
 3. Click **Next** to begin the wizard.
 
@@ -310,7 +310,7 @@ Remote Access Service (RAS) will allow clients on the internal network to access
    - Select the network interface that connects to the internet (INTERNET). This interface will be used for public (internet) access.
    - Click **Next**, then click **Finish**.
   
-     ![](images/gif16.gif)
+     ![](images/gif15-1.gif)
 
 ## Step 8: Installing and Configuring DHCP
 
@@ -336,7 +336,7 @@ Setting up DHCP on your Windows Server 2019 will allow computers on the network 
    - A dialog box will pop up to add the required features. Click **Add Features**.
    - Click **Next**.
   
-     ![](images/gif17.gif)
+     ![](images/gif16-1.gif)
   
 8. Click **Next** on the "Select Features" page.
 
@@ -346,17 +346,19 @@ Setting up DHCP on your Windows Server 2019 will allow computers on the network 
 
 11. Once complete, click **Close**.
 
+   ![](images/gif17-1.gif)    
+
 ### Step 8.2: Complete DHCP Configuration
 
 1. Click on the **yellow notification flag** and then click on **Complete DHCP configuration**.
 
-   ![](images/gif18.gif)
+   ![](images/gif18-1.gif)
 
 2. Click **Next**.
 
 3. Ensure your administrator credentials are correct and click **Commit**.
 
-   ![](images/gif19.gif)
+   ![](images/gif19-1.gif)
 
 4. Click **Close**
    
@@ -372,7 +374,7 @@ Setting up DHCP on your Windows Server 2019 will allow computers on the network 
    - In the DHCP console, expand your server name.
    - Right-click on **IPv4** and select **New Scope**.
   
-     ![](images/gif21.gif)
+     ![](images/gif20-1.gif)
 
 3. Click **Next** to start the wizard.
 
@@ -386,7 +388,7 @@ Setting up DHCP on your Windows Server 2019 will allow computers on the network 
    - Length: 24 
    - Enter the **Subnet mask** (e.g., 255.255.255.0) and click **Next**.
   
-     ![](images/gif22.gif)
+     ![](images/gif21-1.gif)
 
 6. Accept the default lease duration and click **Next**.
 
@@ -395,7 +397,7 @@ Setting up DHCP on your Windows Server 2019 will allow computers on the network 
 8. **Router (Default Gateway)**:
    - Enter the IP address of the router or gateway for your network (192.168.0.1) and click **Add**, then **Next**.
   
-     ![](images/gif23.gif)
+     ![](images/gif22-1.gif)
 
 9. **Domain Name and DNS Server**:
    - Parent domain: This field will be automatically
