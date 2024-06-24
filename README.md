@@ -34,7 +34,7 @@ To set up a Hyper-V virtual machine with two network interface cards (NICs), fol
    - Select **New virtual network switch** and choose **External**.
    - Click **Create Virtual Switch**.
 
-     ![](images/gif1.gif)
+     ![](images/gif01.gif)
 
    - Name the switch "INTERNET".
    - Select the physical network adapter connected to the internet.
