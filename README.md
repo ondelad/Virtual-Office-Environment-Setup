@@ -527,7 +527,7 @@ To create a Windows 10 client machine and join it to the domain, follow these st
 
 3. **New Virtual Machine Wizard**:
    - **Specify Name and Location**:
-     - Name the VM (e.g., Windows10Client).
+     - Name the VM (e.g. Windows10Client).
      - Click **Next**.
       
    - **Specify Generation**:
