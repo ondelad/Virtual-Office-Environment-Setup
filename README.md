@@ -470,9 +470,9 @@ To manage your network effectively, you'll need a dedicated administrative accou
 
 By following these steps, you will have created a new administrative account and granted it Domain Admins privileges, allowing it to manage the domain effectively.
 
-### Creating User Accounts
+## Step 10: Creating User Accounts
 
-Let's create four user accounts in Active Directory.
+Let's create three user accounts in Active Directory.
 
 #### Step 1: Open Active Directory Users and Computers
 
@@ -482,40 +482,36 @@ Let's create four user accounts in Active Directory.
 
 2. **Navigate to the Users Container**:
    - In the Active Directory Users and Computers console, expand your domain.
-   - Click on the **Users** container.
-
-#### Step 2: Create a New User Account
-
-For each user, repeat the following steps:
-
-1. **Create a New User**:
+   - Click on the **Users** container
    - Right-click on the **Users** container.
    - Select **New**, then click **User**.
 
-2. **New Object - User Wizard**:
+3. **New Object - User Wizard**:
    - **First Name**: Enter the user's first name (e.g. Peter).
    - **Last Name**: Enter the user's last name (e.g. Parker).
    - **Full Name**: This field will be automatically populated based on the first and last name.
    - **User Logon Name**: Enter the logon name (e.g. peterp).
    - Click **Next**.
 
-3. **Password Setup**:
+4. **Password Setup**:
    - Enter a password for the new account.
    - Confirm the password.
    - Select **User must change password at next logon**.
    - Click **Next**.
 
-4. Click **Finish** to create the new user account.
+5. Click **Finish** to create the new user account.
 
 Continue the process until all three users have been created.
 
-By following these steps, you will have created four normal user accounts in Active Directory. These users can now log in to the domain with their respective credentials.
+By following these steps, you will have created three normal user accounts in Active Directory. These users can now log in to the domain with their respective credentials.
 
-## Step 10: Creating a Windows 10 Client Machine
+![](images/gif38.gif)
+
+## Step 11: Creating a Windows 10 Client Machine
 
 To create a Windows 10 client machine and join it to the domain, follow these steps:
 
-### Step 10.1: Create a New Virtual Machine for Windows 10
+### Step 11.1: Create a New Virtual Machine for Windows 10
 
 1. **Open Hyper-V Manager**:
    - Click on the **Start** menu.
@@ -527,7 +523,7 @@ To create a Windows 10 client machine and join it to the domain, follow these st
 
 3. **New Virtual Machine Wizard**:
    - **Specify Name and Location**:
-     - Name the VM (e.g. Windows10Client).
+     - Name the VM (e.g. Client).
      - Click **Next**.
       
    - **Specify Generation**:
@@ -553,7 +549,7 @@ To create a Windows 10 client machine and join it to the domain, follow these st
 
 4. Click **Finish** to create the virtual machine.
 
-### Step 10.2: Install Windows 10 on the Virtual Machine
+### Step 11.2: Install Windows 10 on the Virtual Machine
 
 1. **Start the Virtual Machine**:
    - In Hyper-V Manager, select the VM.
@@ -575,7 +571,7 @@ To create a Windows 10 client machine and join it to the domain, follow these st
    - Follow the on-screen prompts to complete the Windows 10 setup.
    - Create a local user account temporarily.
 
-## Step 11: Join the Windows 10 Client to the Domain
+## Step 12: Join the Windows 10 Client to the Domain
 
 1. **Log in to the Windows 10 Client**:
    - Log in with the local user account you created during setup.
