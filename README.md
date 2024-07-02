@@ -1,4 +1,4 @@
-# Building a Virtual Mini Corporate Environment
+# Step-by-Step Guide to Building Active Directory Environment on Hyper-V
 
 This tutorial will guide you through the process of setting up a virtual corporate environment using Windows Server 2019. You'll learn how to install Windows Server 2019, configure Active Directory, DHCP, and DNS Server roles, create an administrative account, and add 3 users to Active Directory. Let's get started!
 
@@ -11,7 +11,7 @@ Before we start, ensure you have the following:
    - Sufficient storage space (at least 50 GB free for the virtual machine).
 
 2. **Software Requirements**:
-   - **Virtualization Software**: Microsoft Hyper-V, VMware Workstation, or Oracle VirtualBox.
+   - **Virtualization Software**: Microsoft Hyper-V.
    - **Windows Server 2019 ISO**: Download from the Microsoft website.
    - **Windows 10 ISO**: Download from the Microsoft website.
 
@@ -503,7 +503,7 @@ Let's create three user accounts in Active Directory.
 
 Continue the process until all three users have been created.
 
-By following these steps, you will have created three normal user accounts in Active Directory. These users can now log in to the domain with their respective credentials.
+By following these steps, you will have created three user accounts in Active Directory. These users can now log in to the domain with their respective credentials.
 
 ![](images/gif38.gif)
 
