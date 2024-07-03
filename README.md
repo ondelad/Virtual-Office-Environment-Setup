@@ -1,6 +1,6 @@
 # Step-by-Step Guide to Building Active Directory Environment on Hyper-V
 
-This tutorial will guide you through the process of setting up a virtual corporate environment using Windows Server 2019. You'll learn how to install Windows Server 2019, configure Active Directory, DHCP, and DNS Server roles, create an administrative account, and add 3 users to Active Directory. Let's get started!
+This tutorial will guide you through the process of setting up a virtual corporate environment using Windows Server 2019. You'll learn how to install Windows Server 2019, configure Active Directory, DHCP, and DNS Server roles, create an administrative account, and add users to Active Directory. Let's get started!
 
 ## Prerequisites
 Before we start, ensure you have the following:
