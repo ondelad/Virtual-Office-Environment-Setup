@@ -505,8 +505,6 @@ Continue the process until all three users have been created.
 
 By following these steps, you will have created three user accounts in Active Directory. These users can now log in to the domain with their respective credentials.
 
-![](images/gif38.gif)
-
 ## Step 11: Creating a Windows 10 Client Machine
 
 To create a Windows 10 client machine and join it to the domain, follow these steps:
@@ -573,37 +571,27 @@ To create a Windows 10 client machine and join it to the domain, follow these st
 
 ## Step 12: Join the Windows 10 Client to the Domain
 
-1. **Log in to the Windows 10 Client**:
-   - Log in with the local user account you created during setup.
-
-2. **Configure Network Settings**:
-   - Ensure the client machine is connected to the internal network.
-   - Open **Settings** > **Network & Internet** > **Status**.
-   - Click on **Change adapter options**.
-   - Right-click on the network adapter connected to the internal network and select **Properties**.
-   - Ensure the network is set to **Private**.
-
-3. **Join the Domain**:
+1. **Join the Domain**:
    - Right-click **Start button**. Select **System**. Click **Rename (advance)**.
 
-   - 
+     ![](images/gif38.gif)
 
    - Click **Change**.
    - Rename **Computer name** (e.g. BCN01) 
    - Select **Domain**. Enter the domain name and click **OK**.
-   - Enter the credentials of a domain user with permission to join computers to the domain (e.g. the admin account created earlier).
+   - Enter the credentials of a domain user with permission to join computers to the domain.
   
-   - 
+     ![](images/gif39.gif)
 
    - Follow the prompts to join the domain.
 
-5. After successfully joining the domain, restart the computer.
+2. After successfully joining the domain, restart the computer.
 
-6. **Log in with Domain Credentials**:
+3. **Log in with Domain Credentials**:
    - On the login screen, click **Other user**.
-   - Enter the domain credentials (e.g., johndoe@example.com) for one of the users created earlier.
+   - Enter the domain credentials for one of the users created earlier.
 
-   - 
+     ![](images/gif40.gif)
 
    - Log in to verify that the user can access the domain.
 
