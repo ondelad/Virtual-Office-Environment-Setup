@@ -12,7 +12,7 @@ Before we start, ensure you have the following:
 
 2. **Software Requirements**:
    - **Virtualization Software**: Microsoft Hyper-V.
-   - **Windows Server 2019 ISO**: Download from the Microsoft website. []()
+   - **Windows Server 2019 ISO**: Download from the Microsoft website. [https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019)
    - **Windows 10 ISO**: Download from the Microsoft website. [https://www.microsoft.com/en-gb/software-download/windows10](https://www.microsoft.com/en-gb/software-download/windows10)
 
 3. **Network Requirements**:
