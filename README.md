@@ -1,6 +1,6 @@
 # Step-by-Step Guide to Building Active Directory Environment on Hyper-V
 
-This tutorial will guide you through the process of setting up an Active Directory environment using Windows Server 2019. You'll learn how to install Windows Server 2019, configure Active Directory, DHCP, and DNS Server roles, create an administrative account, and add users to Active Directory. Let's get started!
+This lab will guide you through the process of setting up an Active Directory environment using Windows Server 2019. You'll learn how to install Windows Server 2019, configure Active Directory, DHCP, and DNS Server roles, create an administrative account, and add users to Active Directory. Let's get started!
 
 ## Prerequisites
 Before we start, ensure you have the following:
@@ -179,6 +179,8 @@ Renaming your server will help in identifying it easily on the network.
 After the server restarts, it will have the new name you assigned. This will make it easier to manage and identify on your network.
 
 ## Step 6: Installing Active Directory and Creating a Domain
+
+###Step 6.1: Install Active Directory
 
 1. **Open Server Manager**:
    - Click on the **Start** menu.
@@ -474,7 +476,7 @@ By following these steps, you will have created a new administrative account and
 
 Let's create three user accounts in Active Directory.
 
-#### Step 1: Open Active Directory Users and Computers
+#### Step 10.1: Open Active Directory Users and Computers
 
 1. **Open Active Directory Users and Computers**:
    - Click on the **Start** menu.
@@ -559,7 +561,8 @@ To create a Windows 10 client machine and join it to the domain, follow these st
    - Follow the on-screen prompts to install Windows 10.
    - Select the appropriate language, time, and keyboard settings.
    - Click **Next** and then **Install Now**.
-   - Enter the Windows 10 product key if required.
+   - Select **I don't have product key**, then click **Next**.
+   - Select **Windows 10 Pro**, then click **Next**.
    - Accept the license terms and click **Next**.
    - Choose **Custom: Install Windows only (advanced)**.
    - Select the virtual hard disk and click **Next**.
@@ -597,6 +600,8 @@ To create a Windows 10 client machine and join it to the domain, follow these st
 
 With these steps, you have created a Windows 10 client machine and joined it to the domain. The client machine can now be used by domain users.
 
-Let me know when you're ready to proceed to the next step!
+## Conclusion
+
+In this lab, you have learned how to set up a virtual office with Windows Server 2019, configure Active Directory, DHCP, and DNS, and enable client machines to access the internet through the server. This setup provides a robust foundation for network management, testing, and training. 
 
 
