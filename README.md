@@ -1,6 +1,6 @@
-# Step-by-Step Guide to Building Active Directory Environment on Hyper-V
+# Step-by-Step Guide to Building Virtual Office Environment on Microsoft Hyper-V
 
-This lab will guide you through the process of setting up an Active Directory environment using Windows Server 2019. You'll learn how to install Windows Server 2019, configure Active Directory, DHCP, and DNS Server roles, create an administrative account, and add users to Active Directory. Let's get started!
+This lab will guide you through the process of setting up a virtual office environment using Microsoft Hyper-V. You'll learn how to install Windows Server 2019, configure Active Directory, DHCP, and DNS Server roles, create an administrative account, and add users to Active Directory. Let's get started!
 
 ## Prerequisites
 Before we start, ensure you have the following:
