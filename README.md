@@ -23,8 +23,6 @@ Next, we'll start with installing the virtualization software and setting up the
 
 ## Step 1: Setting Up a Hyper-V Virtual Machine with Two NICs
 
-To set up a Hyper-V virtual machine with two network interface cards (NICs), follow these steps:
-
 ## Step 1.1: Create Virtual Switches
 
 1. **Create a Virtual Switch for External Network**:
