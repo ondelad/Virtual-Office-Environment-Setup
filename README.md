@@ -23,7 +23,7 @@ Next, we'll start with installing the virtualization software and setting up the
 
 ## Step 1: Setting Up a Hyper-V Virtual Machine with Two NICs
 
-## Step 1.1: Create Virtual Switches
+### Step 1.1: Create Virtual Switches
 
 1. **Create a Virtual Switch for External Network**:
    - Click on the **Start** menu.
@@ -178,7 +178,7 @@ After the server restarts, it will have the new name you assigned. This will mak
 
 ## Step 7: Installing Active Directory and Creating a Domain
 
-###Step 7.1: Install Active Directory
+### Step 7.1: Install Active Directory
 
 1. **Open Server Manager**:
    - Click on the **Start** menu.
