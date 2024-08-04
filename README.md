@@ -38,7 +38,7 @@ Next, we'll start with installing the virtualization software and setting up the
    - Select the physical network adapter connected to the internet.
    - Click **Apply**, then click **OK**.
 
-     ![](images/gif2.gif)
+     ![](images/gif.gif)
 
 2. **Create a Virtual Switch for Internal Network**:
    - In Hyper-V Manager, click on **Virtual Switch Manager** again.
