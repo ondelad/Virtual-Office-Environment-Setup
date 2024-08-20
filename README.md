@@ -6,9 +6,9 @@ This lab will guide you through the process of setting up a virtual office envir
 Before we start, ensure you have the following:
 
 1. **Hardware Requirements**:
-   - A computer with at least 8 GB of RAM (16 GB recommended).
+   - A computer with at least 8 GB RAM (16 GB recommended).
    - A multi-core processor (Quad-core or higher recommended).
-   - Sufficient storage space (at least 50 GB free for the virtual machine).
+   - Sufficient storage space (at least 32 GB free for the virtual machine).
 
 2. **Software Requirements**:
    - **Virtualization Software**: Microsoft Hyper-V.
